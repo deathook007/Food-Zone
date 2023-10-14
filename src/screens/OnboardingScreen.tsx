@@ -4,14 +4,9 @@ import CarousalCard from '../components/common/CarousalCard/CarousalCard';
 import Typography from '../dls/Typography';
 import { SCREEN_NAME } from './screens.names';
 import { generateStyles } from './screens.styles';
+import { hideDefaultHeaded } from './utility/hideDefaultHeaded';
 import { useNavigation } from '@react-navigation/native';
-import React, {
-	useCallback,
-	useLayoutEffect,
-	useMemo,
-	useRef,
-	useState,
-} from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { Dimensions, FlatList, TouchableOpacity, View } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
@@ -19,20 +14,16 @@ export const deviceWidth = Dimensions.get('window').width;
 export let onboardingScreenEnds = false;
 
 export const OnboardingScreen = () => {
+	const [activeIndex, setActiveIndex] = useState(0);
+	const carouselRef = useRef();
+
 	const navigation = useNavigation();
 
-	useLayoutEffect(() => {
-		navigation.setOptions({
-			headerShown: false,
-		});
-	}, []);
+	hideDefaultHeaded();
 
 	const theme = useTheme();
 
 	const styles = generateStyles(theme);
-
-	const [activeIndex, setActiveIndex] = useState(0);
-	const carouselRef = useRef();
 
 	const renderItem = useCallback(({ item }) => {
 		return <CarousalCard {...item} />;
@@ -63,7 +54,7 @@ export const OnboardingScreen = () => {
 	}, [activeIndex, totalItems]);
 
 	const handleCompleteOnboarding = useCallback(() => {
-		navigation.navigate(SCREEN_NAME.HOME_SCREEN as never);
+		navigation.navigate(SCREEN_NAME.LOGIN_SCREEN as never);
 	}, []);
 
 	return (

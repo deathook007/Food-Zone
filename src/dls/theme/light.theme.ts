@@ -26,9 +26,9 @@ export const LIGHT_THEME: ITheme = {
 					fontWeight: 100,
 					lineHeight: 14 * 1.2,
 				},
-				'cta-label-lg': {
+				'cta-label-bold': {
 					fontSize: 16,
-					fontWeight: 100,
+					fontWeight: 500,
 					lineHeight: 16 * 1.2,
 				},
 				'body-base-light': {

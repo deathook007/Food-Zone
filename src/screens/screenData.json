@@ -1,0 +1,15 @@
+{
+	"signUpData": {
+		"SingUpImageUrl": "https://raw.githubusercontent.com/deathook007/TestImages/main/SignupScreen.png",
+		"emailErrorMessage": "Invalid email address",
+		"passwordErrorMessage": "Password must be 8 characters and including numbers and special characters",
+		"passwordMatchError": "Passwords do not match",
+		"buttonText": "Sign up"
+	},
+	"loginData": {
+		"loginImageUrl": "https://raw.githubusercontent.com/deathook007/TestImages/main/SignupScreen.png",
+		"emailErrorMessage": "Invalid email address",
+		"passwordMatchError": "Passwords is incorrect",
+		"buttonText": "Login"
+	}
+}

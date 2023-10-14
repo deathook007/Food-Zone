@@ -45,7 +45,7 @@ export type ITypographyVariants =
 	| 'tag-regular'
 	| 'tag-bold'
 	| 'cta-label-sm'
-	| 'cta-label-lg'
+	| 'cta-label-bold'
 	| 'body-base-regular'
 	| 'body-base-light'
 	| 'body-base-bold'

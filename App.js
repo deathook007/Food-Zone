@@ -2,7 +2,9 @@ import { LIGHT_MODE } from './constants';
 import { DARK_THEME } from './src/dls/theme/dark.theme';
 import { LIGHT_THEME } from './src/dls/theme/light.theme';
 import HomeScreen from './src/screens/HomeScreen';
+import { LoginScreen } from './src/screens/Login/LoginScreen';
 import { OnboardingScreen } from './src/screens/OnboardingScreen';
+import SignupScreen from './src/screens/Signup/SignupScreen';
 import { SCREEN_NAME } from './src/screens/screens.names';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -30,6 +32,14 @@ export default function App() {
 					<Stack.Screen
 						name={SCREEN_NAME.ONBOARDING_SCREEN}
 						component={OnboardingScreen}
+					/>
+					<Stack.Screen
+						name={SCREEN_NAME.SIGNUP_SCREEN}
+						component={SignupScreen}
+					/>
+					<Stack.Screen
+						name={SCREEN_NAME.LOGIN_SCREEN}
+						component={LoginScreen}
 					/>
 					<Stack.Screen
 						name={SCREEN_NAME.HOME_SCREEN}

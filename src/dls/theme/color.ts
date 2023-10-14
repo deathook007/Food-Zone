@@ -34,14 +34,14 @@ export const LIGHT_DLS_COLOR: IDLSColor = {
 		400: '#E5777C',
 		300: '#EC999D',
 		200: '#F2BBBD',
-		100: '#DF555B',
+		100: '#BF0101',
 	},
 	BACKGROUND: {
-		500: '#FFFFFF',
-		400: '#FFFFFF',
-		300: '#FFFFFF',
-		200: '#FFFFFF',
-		100: '#F5F5F5',
+		500: '#FEF0E3',
+		400: '#F8BF2F',
+		300: '#2A2D37',
+		200: '#FC9631',
+		100: '#F5B358',
 	},
 	TEXT: {
 		PRIMARY_TEXT: '#212121',
@@ -49,7 +49,7 @@ export const LIGHT_DLS_COLOR: IDLSColor = {
 		DISABLED_TEXT: '#9E9E9E',
 	},
 	DIVIDER: {
-		PRIMARY_DIVIDER: '#2E2E2E',
+		PRIMARY_DIVIDER: '#666666',
 		SECONDARY_DIVIDER: '#E3E3E3',
 	},
 };
@@ -91,11 +91,11 @@ export const DARK_DLS_COLOR: IDLSColor = {
 		100: '#DF555B',
 	},
 	BACKGROUND: {
-		500: '#FFFFFF',
-		400: '#FFFFFF',
-		300: '#FFFFFF',
-		200: '#FFFFFF',
-		100: '#F5F5F5',
+		500: '#FEF0E3',
+		400: '#F8BF2F',
+		300: '#2A2D37',
+		200: '#FC9631',
+		100: '#F5B358',
 	},
 	TEXT: {
 		PRIMARY_TEXT: '#212121',
@@ -103,7 +103,7 @@ export const DARK_DLS_COLOR: IDLSColor = {
 		DISABLED_TEXT: '#9E9E9E',
 	},
 	DIVIDER: {
-		PRIMARY_DIVIDER: '#2E2E2E',
+		PRIMARY_DIVIDER: '#666666',
 		SECONDARY_DIVIDER: '#E3E3E3',
 	},
 };

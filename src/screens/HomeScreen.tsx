@@ -1,17 +1,11 @@
 import Typography from '../dls/Typography';
 import { SCREEN_NAME } from './screens.names';
-import { useNavigation } from '@react-navigation/native';
-import React, { useLayoutEffect } from 'react';
+import { hideDefaultHeaded } from './utility/hideDefaultHeaded';
+import React from 'react';
 import { SafeAreaView } from 'react-native';
 
 const HomeScreen = () => {
-	const navigation = useNavigation();
-
-	useLayoutEffect(() => {
-		navigation.setOptions({
-			headerShown: false,
-		});
-	}, []);
+	hideDefaultHeaded();
 
 	return (
 		<SafeAreaView>
