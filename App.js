@@ -1,3 +1,4 @@
+import { LIGHT_MODE } from './constants';
 import { DARK_THEME } from './src/dls/theme/dark.theme';
 import { LIGHT_THEME } from './src/dls/theme/light.theme';
 import HomeScreen from './src/screens/HomeScreen';
@@ -10,10 +11,10 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
 	// setSelectedTheme can be used for toggling between dark and light theme
-	const [selectedTheme, setSelectedTheme] = useState('LIGHT');
+	const [selectedTheme, setSelectedTheme] = useState(LIGHT_MODE);
 
 	const currentTheme = useMemo(() => {
-		if (selectedTheme === 'LIGHT') {
+		if (selectedTheme === LIGHT_MODE) {
 			return LIGHT_THEME;
 		}
 		return DARK_THEME;
