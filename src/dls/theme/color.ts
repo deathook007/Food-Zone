@@ -1,0 +1,109 @@
+import { IDLSColor } from './color.types';
+
+export const LIGHT_DLS_COLOR: IDLSColor = {
+	PRIMARY: {
+		500: '#22548A',
+		400: '#4E76A1',
+		300: '#7A98B9',
+		200: '#A7BBD0',
+		100: '#EBF1F9',
+	},
+	SECONDARY: {
+		500: '#F2F2E8',
+		400: '#F5F5ED',
+		300: '#F7F7F1',
+		200: '#FAFAF6',
+		100: '#FCFCFA',
+	},
+	SUCCESS: {
+		500: '#198775',
+		400: '#5FB2A5',
+		300: '#87C5BB',
+		200: '#AFD9D2',
+		100: '#E7F3F1',
+	},
+	WARNING: {
+		500: '#EB8D03',
+		400: '#FFAD33',
+		300: '#FFC166',
+		200: '#FFD699',
+		100: '#FFF6E9',
+	},
+	ERROR: {
+		500: '#DF555B',
+		400: '#E5777C',
+		300: '#EC999D',
+		200: '#F2BBBD',
+		100: '#DF555B',
+	},
+	BACKGROUND: {
+		500: '#FFFFFF',
+		400: '#FFFFFF',
+		300: '#FFFFFF',
+		200: '#FFFFFF',
+		100: '#F5F5F5',
+	},
+	TEXT: {
+		PRIMARY_TEXT: '#212121',
+		SECONDARY_TEXT: '#666666',
+		DISABLED_TEXT: '#9E9E9E',
+	},
+	DIVIDER: {
+		PRIMARY_DIVIDER: '#2E2E2E',
+		SECONDARY_DIVIDER: '#E3E3E3',
+	},
+};
+
+export const DARK_DLS_COLOR: IDLSColor = {
+	PRIMARY: {
+		500: '#22548A',
+		400: '#4E76A1',
+		300: '#7A98B9',
+		200: '#A7BBD0',
+		100: '#EBF1F9',
+	},
+	SECONDARY: {
+		500: '#F2F2E8',
+		400: '#F5F5ED',
+		300: '#F7F7F1',
+		200: '#FAFAF6',
+		100: '#FCFCFA',
+	},
+	SUCCESS: {
+		500: '#198775',
+		400: '#5FB2A5',
+		300: '#87C5BB',
+		200: '#AFD9D2',
+		100: '#E7F3F1',
+	},
+	WARNING: {
+		500: '#EB8D03',
+		400: '#FFAD33',
+		300: '#FFC166',
+		200: '#FFD699',
+		100: '#FFF6E9',
+	},
+	ERROR: {
+		500: '#DF555B',
+		400: '#E5777C',
+		300: '#EC999D',
+		200: '#F2BBBD',
+		100: '#DF555B',
+	},
+	BACKGROUND: {
+		500: '#FFFFFF',
+		400: '#FFFFFF',
+		300: '#FFFFFF',
+		200: '#FFFFFF',
+		100: '#F5F5F5',
+	},
+	TEXT: {
+		PRIMARY_TEXT: '#212121',
+		SECONDARY_TEXT: '#666666',
+		DISABLED_TEXT: '#9E9E9E',
+	},
+	DIVIDER: {
+		PRIMARY_DIVIDER: '#2E2E2E',
+		SECONDARY_DIVIDER: '#E3E3E3',
+	},
+};

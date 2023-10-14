@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { DARK_THEME } from './src/dls/theme/dark.theme';
+import { LIGHT_THEME } from './src/dls/theme/light.theme';
+import HomeScreen from './src/screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useState, useMemo } from 'react';
+import { ThemeProvider } from 'styled-components/native';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+	// setSelectedTheme can be used for toggling between dark and light theme
+	const [selectedTheme, setSelectedTheme] = useState('LIGHT');
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+	const currentTheme = useMemo(() => {
+		if (selectedTheme === 'LIGHT') {
+			return LIGHT_THEME;
+		}
+		return DARK_THEME;
+	}, [selectedTheme]);
+
+	return (
+		// The ThemeProvider integrates a theme tree object into the application.
+		<ThemeProvider theme={currentTheme}>
+			<NavigationContainer>
+				<Stack.Navigator>
+					<Stack.Screen name='Home' component={HomeScreen} />
+				</Stack.Navigator>
+			</NavigationContainer>
+		</ThemeProvider>
+	);
+}
