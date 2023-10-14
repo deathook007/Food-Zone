@@ -2,18 +2,18 @@ import { IDLSColor } from './color.types';
 
 export const LIGHT_DLS_COLOR: IDLSColor = {
 	PRIMARY: {
-		500: '#22548A',
-		400: '#4E76A1',
-		300: '#7A98B9',
-		200: '#A7BBD0',
-		100: '#EBF1F9',
+		500: '#FFFFFE',
+		400: '#F8BF2F',
+		300: '#2A2D37',
+		200: '#FC9631',
+		100: '#F5B358',
 	},
 	SECONDARY: {
-		500: '#F2F2E8',
-		400: '#F5F5ED',
-		300: '#F7F7F1',
-		200: '#FAFAF6',
-		100: '#FCFCFA',
+		500: '#FFFFFE',
+		400: '#F8BF2F',
+		300: '#2A2D37',
+		200: '#FC9631',
+		100: '#F5B358',
 	},
 	SUCCESS: {
 		500: '#198775',
@@ -56,18 +56,18 @@ export const LIGHT_DLS_COLOR: IDLSColor = {
 
 export const DARK_DLS_COLOR: IDLSColor = {
 	PRIMARY: {
-		500: '#22548A',
-		400: '#4E76A1',
-		300: '#7A98B9',
-		200: '#A7BBD0',
-		100: '#EBF1F9',
+		500: '#FFFFFE',
+		400: '#F8BF2F',
+		300: '#2A2D37',
+		200: '#FC9631',
+		100: '#F5B358',
 	},
 	SECONDARY: {
-		500: '#F2F2E8',
-		400: '#F5F5ED',
-		300: '#F7F7F1',
-		200: '#FAFAF6',
-		100: '#FCFCFA',
+		500: '#FFFFFE',
+		400: '#F8BF2F',
+		300: '#2A2D37',
+		200: '#FC9631',
+		100: '#F5B358',
 	},
 	SUCCESS: {
 		500: '#198775',

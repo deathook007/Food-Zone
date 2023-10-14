@@ -11,6 +11,7 @@ export interface IBrandFontFamily {
 export type ITypographyVariantsStyles = {
 	[key in ITypographyVariants]: {
 		fontSize: number;
+		fontWeight: number;
 		lineHeight: number;
 	};
 };

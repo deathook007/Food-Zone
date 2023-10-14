@@ -2,6 +2,8 @@ import { LIGHT_MODE } from './constants';
 import { DARK_THEME } from './src/dls/theme/dark.theme';
 import { LIGHT_THEME } from './src/dls/theme/light.theme';
 import HomeScreen from './src/screens/HomeScreen';
+import { OnboardingScreen } from './src/screens/OnboardingScreen';
+import { SCREEN_NAME } from './src/screens/screens.names';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState, useMemo } from 'react';
@@ -25,7 +27,14 @@ export default function App() {
 		<ThemeProvider theme={currentTheme}>
 			<NavigationContainer>
 				<Stack.Navigator>
-					<Stack.Screen name='Home' component={HomeScreen} />
+					<Stack.Screen
+						name={SCREEN_NAME.ONBOARDING_SCREEN}
+						component={OnboardingScreen}
+					/>
+					<Stack.Screen
+						name={SCREEN_NAME.HOME_SCREEN}
+						component={HomeScreen}
+					/>
 				</Stack.Navigator>
 			</NavigationContainer>
 		</ThemeProvider>
