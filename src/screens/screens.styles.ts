@@ -52,6 +52,8 @@ export const generateStyles = (theme: any) => {
 				height: 1,
 			},
 		},
-		homePage: {},
+		homePage: {
+			backgroundColor: theme.DLS.COLOR.BACKGROUND[500],
+		},
 	});
 };
