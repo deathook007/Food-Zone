@@ -47,6 +47,12 @@ export const generateStyles = (theme: any) => {
 			marginHorizontal: theme.DLS.SIZE[5],
 			color: theme.DLS.COLOR.ERROR[100],
 		},
+		loginText: {
+			textAlign: 'center',
+			textDecorationLine: 'underline',
+			marginTop: theme.DLS.SIZE[2],
+			color: theme.DLS.COLOR.SUCCESS[500],
+		},
 		inputContainer: {
 			width: '80%',
 			marginTop: theme.DLS.SIZE[2],
@@ -71,7 +77,7 @@ export const generateStyles = (theme: any) => {
 			borderWidth: theme.DLS.STROKE[0.5],
 			borderColor: theme.DLS.COLOR.PRIMARY[500],
 			backgroundColor: theme.DLS.COLOR.PRIMARY[300],
-			marginTop: theme.DLS.SIZE[2],
+			marginVertical: theme.DLS.SIZE[2],
 		},
 		buttonText: {
 			color: theme.DLS.COLOR.PRIMARY[500],

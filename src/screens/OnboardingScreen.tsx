@@ -54,7 +54,7 @@ export const OnboardingScreen = () => {
 	}, [activeIndex, totalItems]);
 
 	const handleCompleteOnboarding = useCallback(() => {
-		navigation.navigate(SCREEN_NAME.LOGIN_SCREEN as never);
+		navigation.navigate(SCREEN_NAME.SIGNUP_SCREEN as never);
 	}, []);
 
 	return (

@@ -1,19 +1,33 @@
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 import { CONFIRM_PASSWORD, EMAIL, PASSWORD } from '../../constants';
 import Typography from '../../dls/Typography';
 import data from '../screenData.json';
+import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { isPasswordStrong } from '../utility/strongPasswordCheck';
 import { isEmailValid } from '../utility/validateEmailCheck';
 import { generateStyles } from './Signup.styles';
 import { useNavigation } from '@react-navigation/native';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useCallback, useState } from 'react';
-import { View, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
+import { View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 const SignupScreen = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
+
+	const [isEmailError, setIsEmailError] = useState(false);
+	const [isPasswordError, setIsPasswordError] = useState(false);
+	const [isPasswordMatched, setIsPasswordMatched] = useState(true);
+	const [emailExists, setEmailExists] = useState(false);
+	console.log(
+		'🚀 ~ file: SignupScreen.tsx:24 ~ SignupScreen ~ emailExists:',
+		emailExists
+	);
+
+	const auth = FIREBASE_AUTH;
 
 	const theme = useTheme();
 
@@ -30,12 +44,9 @@ const SignupScreen = () => {
 		emailErrorMessage,
 		passwordErrorMessage,
 		passwordMatchError,
+		emailExistsError,
 		buttonText = 'Sign up',
 	} = signUpData || {};
-
-	const [isEmailError, setIsEmailError] = useState(false);
-	const [isPasswordError, setIsPasswordError] = useState(false);
-	const [isPasswordMatched, setIsPasswordMatched] = useState(true);
 
 	const handleOnFocus = useCallback(() => {
 		setIsEmailError(false);
@@ -43,7 +54,7 @@ const SignupScreen = () => {
 		setIsPasswordMatched(true);
 	}, []);
 
-	const handleSignup = () => {
+	const handleSignup = async () => {
 		handleOnFocus();
 		if (!isEmailValid(email)) {
 			setIsEmailError(true);
@@ -60,10 +71,20 @@ const SignupScreen = () => {
 			return;
 		}
 
-		// If all checks pass, proceed with the signup
-		console.log('Email:', email);
-		console.log('Password:', password);
+		try {
+			await createUserWithEmailAndPassword(auth, email, password);
+			navigation.navigate(SCREEN_NAME.HOME_SCREEN as never);
+		} catch (error) {
+			setEmailExists(true);
+			setTimeout(() => {
+				setEmailExists(false);
+			}, 3000);
+		}
 	};
+
+	const handleLoginNavigation = useCallback(() => {
+		navigation.navigate(SCREEN_NAME.LOGIN_SCREEN as never);
+	}, []);
 
 	return (
 		<View style={styles.container}>
@@ -148,6 +169,15 @@ const SignupScreen = () => {
 				)}
 				<TouchableOpacity
 					activeOpacity={0.7}
+					onPress={handleLoginNavigation}
+				>
+					<Typography variant={'tag-bold'} style={styles.loginText}>
+						{'Already a user Login'}
+					</Typography>
+				</TouchableOpacity>
+
+				<TouchableOpacity
+					activeOpacity={0.7}
 					onPress={handleSignup}
 					style={styles.buttonContainer}
 				>
@@ -158,6 +188,14 @@ const SignupScreen = () => {
 						{buttonText}
 					</Typography>
 				</TouchableOpacity>
+				{emailExists && (
+					<Typography
+						variant={'tag-bold'}
+						style={[styles.errorMessage, { textAlign: 'center' }]}
+					>
+						{emailExistsError}
+					</Typography>
+				)}
 			</View>
 		</View>
 	);

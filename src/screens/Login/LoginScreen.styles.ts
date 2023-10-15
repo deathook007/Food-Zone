@@ -71,7 +71,7 @@ export const generateStyles = (theme: any) => {
 			borderWidth: theme.DLS.STROKE[0.5],
 			borderColor: theme.DLS.COLOR.PRIMARY[500],
 			backgroundColor: theme.DLS.COLOR.PRIMARY[300],
-			marginTop: theme.DLS.SIZE[2],
+			marginVertical: theme.DLS.SIZE[2],
 		},
 		buttonText: {
 			color: theme.DLS.COLOR.PRIMARY[500],

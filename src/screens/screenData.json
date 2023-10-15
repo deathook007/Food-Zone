@@ -4,12 +4,14 @@
 		"emailErrorMessage": "Invalid email address",
 		"passwordErrorMessage": "Password must be 8 characters and including numbers and special characters",
 		"passwordMatchError": "Passwords do not match",
+		"emailExistsError": "Email already exists! Please enter another email Id",
 		"buttonText": "Sign up"
 	},
 	"loginData": {
 		"loginImageUrl": "https://raw.githubusercontent.com/deathook007/TestImages/main/SignupScreen.png",
 		"emailErrorMessage": "Invalid email address",
 		"passwordMatchError": "Passwords is incorrect",
+		"invalidCredentialErrorMessage": "Invalid credentials. Please try with rigth credentials",
 		"buttonText": "Login"
 	}
 }

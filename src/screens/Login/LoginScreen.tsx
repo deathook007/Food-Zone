@@ -1,11 +1,13 @@
-import { CONFIRM_PASSWORD, EMAIL, PASSWORD } from '../../constants';
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
+import { EMAIL, PASSWORD } from '../../constants';
 import Typography from '../../dls/Typography/Typography';
 import data from '../screenData.json';
+import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
-import { isPasswordStrong } from '../utility/strongPasswordCheck';
 import { isEmailValid } from '../utility/validateEmailCheck';
 import { generateStyles } from './LoginScreen.styles';
 import { useNavigation } from '@react-navigation/native';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useCallback, useState } from 'react';
 import { View, Image, TextInput, TouchableOpacity } from 'react-native';
 import { useTheme } from 'styled-components/native';
@@ -13,7 +15,12 @@ import { useTheme } from 'styled-components/native';
 export const LoginScreen = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [confirmPassword, setConfirmPassword] = useState('');
+
+	const [isEmailError, setIsEmailError] = useState(false);
+	const [isPasswordMatched, setIsPasswordMatched] = useState(true);
+	const [invalidCredentialError, setInvalidCredentialError] = useState(false);
+
+	const auth = FIREBASE_AUTH;
 
 	const theme = useTheme();
 
@@ -29,26 +36,30 @@ export const LoginScreen = () => {
 		loginImageUrl = '',
 		emailErrorMessage,
 		passwordMatchError,
+		invalidCredentialErrorMessage,
 		buttonText = 'Login',
 	} = loginData || {};
-
-	const [isEmailError, setIsEmailError] = useState(false);
-	const [isPasswordMatched, setIsPasswordMatched] = useState(true);
 
 	const handleOnFocus = useCallback(() => {
 		setIsEmailError(false);
 		setIsPasswordMatched(true);
 	}, []);
 
-	const handleLogin = () => {
+	const handleLogin = async () => {
 		handleOnFocus();
 		if (!isEmailValid(email)) {
 			setIsEmailError(true);
 			return;
 		}
-
-		// If all checks pass, proceed with the login
-		console.log('True');
+		try {
+			await signInWithEmailAndPassword(auth, email, password);
+			navigation.navigate(SCREEN_NAME.HOME_SCREEN as never);
+		} catch (error) {
+			setInvalidCredentialError(true);
+			setTimeout(() => {
+				setInvalidCredentialError(false);
+			}, 3000);
+		}
 	};
 
 	return (
@@ -123,6 +134,14 @@ export const LoginScreen = () => {
 						{buttonText}
 					</Typography>
 				</TouchableOpacity>
+				{invalidCredentialError && (
+					<Typography
+						variant={'tag-bold'}
+						style={[styles.errorMessage, { textAlign: 'center' }]}
+					>
+						{invalidCredentialErrorMessage}
+					</Typography>
+				)}
 			</View>
 		</View>
 	);
