@@ -5,6 +5,7 @@ import { LIGHT_THEME } from './src/dls/theme/light.theme';
 import HomeScreen from './src/screens/HomeScreen';
 import { LoginScreen } from './src/screens/Login/LoginScreen';
 import { OnboardingScreen } from './src/screens/OnboardingScreen';
+import RestaurantScreen from './src/screens/Restaurant/RestaurantScreen';
 import SignupScreen from './src/screens/Signup/SignupScreen';
 import { SCREEN_NAME } from './src/screens/screens.names';
 import { NavigationContainer } from '@react-navigation/native';
@@ -44,9 +45,13 @@ export default function App() {
 						component={OnboardingScreen}
 					/> */}
 					{/* {user ? ( */}
-					<Stack.Screen
+					{/* <Stack.Screen
 						name={SCREEN_NAME.HOME_SCREEN}
 						component={HomeScreen}
+					/> */}
+					<Stack.Screen
+						name={SCREEN_NAME.RESTAURANT_SCREEN}
+						component={RestaurantScreen}
 					/>
 					{/* ) : ( */}
 					{/* <>

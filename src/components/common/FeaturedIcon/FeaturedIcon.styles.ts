@@ -6,6 +6,13 @@ export const generateStyles = (theme: any) => {
 			width: theme.DLS.SIZE[8],
 			flexDirection: 'column',
 			marginHorizontal: theme.DLS.SIZE[2],
+			shadowOffset: {
+				width: 1,
+				height: 1,
+			},
+			shadowOpacity: 0.25,
+			shadowRadius: 3,
+			elevation: 3,
 		},
 		imageContainer: {
 			justifyContent: 'center',

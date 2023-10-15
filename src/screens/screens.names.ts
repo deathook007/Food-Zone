@@ -3,4 +3,5 @@ export const SCREEN_NAME = {
 	ONBOARDING_SCREEN: 'OnboardingScreen',
 	LOGIN_SCREEN: 'LoginScreen',
 	SIGNUP_SCREEN: 'SignupScreen',
+	RESTAURANT_SCREEN: 'RestaurantScreen',
 };
