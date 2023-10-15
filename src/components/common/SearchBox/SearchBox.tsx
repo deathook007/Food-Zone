@@ -1,6 +1,6 @@
 import { generateStyles } from './SearchBox.styles';
 import React, { useCallback, useState } from 'react';
-import { Image, TextInput, View } from 'react-native';
+import { TextInput, View } from 'react-native';
 import * as Icon from 'react-native-feather';
 import { useTheme } from 'styled-components/native';
 

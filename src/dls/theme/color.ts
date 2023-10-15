@@ -9,7 +9,7 @@ export const LIGHT_DLS_COLOR: IDLSColor = {
 		100: '#F5B358',
 	},
 	SECONDARY: {
-		500: '#FFFFFE',
+		500: '#FFF6E9',
 		400: '#F8BF2F',
 		300: '#2A2D37',
 		200: '#FC9631',

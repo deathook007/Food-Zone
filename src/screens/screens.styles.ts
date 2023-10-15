@@ -58,5 +58,29 @@ export const generateStyles = (theme: any) => {
 		featuredFood: {
 			flexDirection: 'column',
 		},
+		restaurantSection: {
+			marginTop: theme.DLS.SIZE[2],
+		},
+		headingSection: {
+			flexDirection: 'row',
+			justifyContent: 'space-between',
+			marginHorizontal: theme.DLS.SIZE[2],
+			marginTop: theme.DLS.SIZE[1],
+		},
+		headingContainer: {
+			flexDirection: 'column',
+		},
+		heading: {
+			color: theme.DLS.COLOR.TEXT.PRIMARY_TEXT,
+		},
+		subheading: {
+			marginTop: theme.DLS.SIZE[0.25],
+		},
+		seeAllButtonContainer: {
+			padding: theme.DLS.SIZE[1],
+		},
+		seeAllText: {
+			color: theme.DLS.COLOR.BACKGROUND[200],
+		},
 	});
 };
