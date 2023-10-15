@@ -55,5 +55,8 @@ export const generateStyles = (theme: any) => {
 		homePage: {
 			backgroundColor: theme.DLS.COLOR.BACKGROUND[500],
 		},
+		featuredFood: {
+			flexDirection: 'column',
+		},
 	});
 };
