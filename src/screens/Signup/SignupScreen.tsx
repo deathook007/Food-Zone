@@ -22,10 +22,6 @@ const SignupScreen = () => {
 	const [isPasswordError, setIsPasswordError] = useState(false);
 	const [isPasswordMatched, setIsPasswordMatched] = useState(true);
 	const [emailExists, setEmailExists] = useState(false);
-	console.log(
-		'🚀 ~ file: SignupScreen.tsx:24 ~ SignupScreen ~ emailExists:',
-		emailExists
-	);
 
 	const auth = FIREBASE_AUTH;
 

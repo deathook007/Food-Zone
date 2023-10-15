@@ -52,5 +52,6 @@ export const generateStyles = (theme: any) => {
 				height: 1,
 			},
 		},
+		homePage: {},
 	});
 };

@@ -1,16 +1,22 @@
+import SearchBox from '../components/common/SearchBox/SearchBox';
 import Typography from '../dls/Typography';
-import { SCREEN_NAME } from './screens.names';
+import { generateStyles } from './screens.styles';
 import { hideDefaultHeaded } from './utility/hideDefaultHeaded';
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native';
+import { useTheme } from 'styled-components/native';
 
 const HomeScreen = () => {
 	hideDefaultHeaded();
 
+	const theme = useTheme();
+
+	const styles = generateStyles(theme);
+
 	return (
-		<SafeAreaView>
-			<Typography variant='x-small'>{SCREEN_NAME.HOME_SCREEN}</Typography>
-		</SafeAreaView>
+		<ScrollView style={styles.homePage}>
+			<SearchBox />
+		</ScrollView>
 	);
 };
 
