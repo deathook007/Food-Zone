@@ -56,7 +56,7 @@ const SearchBox = () => {
 				</View>
 			</View>
 			<View style={styles.sliderIconContainer}>
-				<Icon.Sliders
+				<Icon.User
 					height={theme.DLS.SIZE[3]}
 					width={theme.DLS.SIZE[3]}
 					stroke={theme.DLS.COLOR.BACKGROUND[500]}

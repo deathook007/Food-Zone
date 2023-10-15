@@ -17,7 +17,7 @@ export const OnboardingScreen = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const carouselRef = useRef();
 
-	const navigation = useNavigation();
+	const navigation = useNavigation() as any;
 
 	hideDefaultHeaded();
 
@@ -54,7 +54,7 @@ export const OnboardingScreen = () => {
 	}, [activeIndex, totalItems]);
 
 	const handleCompleteOnboarding = useCallback(() => {
-		navigation.navigate(SCREEN_NAME.SIGNUP_SCREEN as never);
+		navigation.replace(SCREEN_NAME.SIGNUP_SCREEN as never);
 	}, []);
 
 	return (

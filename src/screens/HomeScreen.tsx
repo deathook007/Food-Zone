@@ -3,10 +3,18 @@ import RestaurantCard from '../components/common/RestaurantCard/RestaurantCard';
 import SearchBox from '../components/common/SearchBox/SearchBox';
 import Typography from '../dls/Typography';
 import data from './screenData.json';
+import { SCREEN_NAME } from './screens.names';
 import { generateStyles } from './screens.styles';
 import { hideDefaultHeaded } from './utility/hideDefaultHeaded';
-import React from 'react';
-import { FlatList, ScrollView, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import React, { useCallback } from 'react';
+import {
+	Alert,
+	FlatList,
+	ScrollView,
+	TouchableOpacity,
+	View,
+} from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 const HomeScreen = () => {
@@ -27,6 +35,22 @@ const HomeScreen = () => {
 		nonVegRestaurants = [],
 	} = data || {};
 
+	const navigation = useNavigation();
+
+	const handleRestaurantNavigation = useCallback(() => {
+		navigation.navigate(SCREEN_NAME.RESTAURANT_SCREEN as never);
+	}, []);
+
+	const handleListAllVegRestaurants = useCallback(() => {
+		Alert.alert('Page listing all veg restaurants! Work under progress');
+	}, []);
+
+	const handleListAllNonVegRestaurants = useCallback(() => {
+		Alert.alert(
+			'Page listing all non veg restaurants! Work under progress'
+		);
+	}, []);
+
 	return (
 		<ScrollView style={styles.homePage}>
 			<SearchBox />
@@ -34,6 +58,7 @@ const HomeScreen = () => {
 				data={featuredFood}
 				horizontal={true}
 				showsHorizontalScrollIndicator={false}
+				keyExtractor={(item) => item.id}
 				renderItem={({ item }) => (
 					<FeaturedIcon
 						key={item.id}
@@ -61,6 +86,7 @@ const HomeScreen = () => {
 					</View>
 					<TouchableOpacity
 						activeOpacity={0.7}
+						onPress={handleListAllVegRestaurants}
 						style={styles.seeAllButtonContainer}
 					>
 						<Typography
@@ -75,19 +101,25 @@ const HomeScreen = () => {
 					data={vegRestaurants}
 					horizontal={true}
 					showsHorizontalScrollIndicator={false}
+					keyExtractor={(item) => item.id}
 					renderItem={({ item }) => (
-						<RestaurantCard
-							key={item.id}
-							id={item.id}
-							ulr={item.url}
-							title={item.title}
-							subtitle={item?.subtitle}
-							rating={item.rating}
-							deliveryTime={item.deliveryTime}
-							foodDescription={item?.foodDescription}
-							freeDeliveryText={item.freeDeliveryText}
-							discount={item?.discount}
-						/>
+						<TouchableOpacity
+							activeOpacity={0.7}
+							onPress={handleRestaurantNavigation}
+						>
+							<RestaurantCard
+								key={item.id}
+								id={item.id}
+								ulr={item.url}
+								title={item.title}
+								subtitle={item?.subtitle}
+								rating={item.rating}
+								deliveryTime={item.deliveryTime}
+								foodDescription={item?.foodDescription}
+								freeDeliveryText={item.freeDeliveryText}
+								discount={item?.discount}
+							/>
+						</TouchableOpacity>
 					)}
 				/>
 			</View>
@@ -109,6 +141,7 @@ const HomeScreen = () => {
 					</View>
 					<TouchableOpacity
 						activeOpacity={0.7}
+						onPress={handleListAllNonVegRestaurants}
 						style={styles.seeAllButtonContainer}
 					>
 						<Typography
@@ -124,18 +157,23 @@ const HomeScreen = () => {
 					horizontal={true}
 					showsHorizontalScrollIndicator={false}
 					renderItem={({ item }) => (
-						<RestaurantCard
-							key={item.id}
-							id={item.id}
-							ulr={item.url}
-							title={item.title}
-							subtitle={item?.subtitle}
-							rating={item.rating}
-							deliveryTime={item.deliveryTime}
-							foodDescription={item?.foodDescription}
-							freeDeliveryText={item.freeDeliveryText}
-							discount={item?.discount}
-						/>
+						<TouchableOpacity
+							activeOpacity={0.7}
+							onPress={handleRestaurantNavigation}
+						>
+							<RestaurantCard
+								key={item.id}
+								id={item.id}
+								ulr={item.url}
+								title={item.title}
+								subtitle={item?.subtitle}
+								rating={item.rating}
+								deliveryTime={item.deliveryTime}
+								foodDescription={item?.foodDescription}
+								freeDeliveryText={item.freeDeliveryText}
+								discount={item?.discount}
+							/>
+						</TouchableOpacity>
 					)}
 				/>
 			</View>

@@ -24,7 +24,7 @@ export const LoginScreen = () => {
 
 	const theme = useTheme();
 
-	const navigation = useNavigation();
+	const navigation = useNavigation() as any;
 
 	hideDefaultHeaded();
 
@@ -53,7 +53,7 @@ export const LoginScreen = () => {
 		}
 		try {
 			await signInWithEmailAndPassword(auth, email, password);
-			navigation.navigate(SCREEN_NAME.HOME_SCREEN as never);
+			navigation.replace(SCREEN_NAME.HOME_SCREEN as never);
 		} catch (error) {
 			setInvalidCredentialError(true);
 			setTimeout(() => {

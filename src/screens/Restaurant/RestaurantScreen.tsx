@@ -1,9 +1,10 @@
 import MenuCard from '../../components/common/MenuCard/MenuCard';
 import RestaurantDetailsCard from '../../components/common/RestaurantDetailsCard/RestaurantDetailsCard';
 import Typography from '../../dls/Typography';
+import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { generateStyles } from './RestaurantScreen.styles';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useCallback, useState } from 'react';
 import { ScrollView, View, Image, TouchableOpacity } from 'react-native';
 import * as Icon from 'react-native-feather';
@@ -83,8 +84,14 @@ const RestaurantScreen = () => {
 
 	const styles = generateStyles(theme);
 
+	const navigation = useNavigation();
+
 	const handleModalToggle = useCallback(() => {
 		setModalVisible((modalVisible) => !modalVisible);
+	}, []);
+
+	const handleCartNavigation = useCallback(() => {
+		navigation.navigate(SCREEN_NAME.CART_SCREEN as never);
 	}, []);
 
 	if (!menu || menu.length === 0) {
@@ -156,7 +163,11 @@ const RestaurantScreen = () => {
 					);
 				})}
 			</ScrollView>
-			<TouchableOpacity activeOpacity={0.95} style={styles.stickyCart}>
+			<TouchableOpacity
+				activeOpacity={0.95}
+				onPress={handleCartNavigation}
+				style={styles.stickyCart}
+			>
 				<View style={styles.cartContainer}>
 					<Icon.ShoppingCart
 						height={theme.DLS.SIZE[4]}
