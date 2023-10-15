@@ -1,7 +1,7 @@
 import Typography from '../../../dls/Typography';
 import { generateStyles } from './MenuCard.styles';
 import { IMenuCardProps } from './MenuCard.types';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { View, TouchableOpacity, Modal, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
 import { useTheme } from 'styled-components/native';
@@ -85,7 +85,35 @@ const MenuCard = (props: IMenuCardProps) => {
 					/>
 				</TouchableOpacity>
 			</View>
-			<View style={styles.dishCountContainer}></View>
+			<View style={styles.dishCountContainer}>
+				<TouchableOpacity activeOpacity={0.7}>
+					<Icon.MinusCircle
+						height={theme.DLS.SIZE[3]}
+						width={theme.DLS.SIZE[3]}
+						stroke={theme.DLS.COLOR.BACKGROUND[200]}
+						fill={theme.DLS.COLOR.PRIMARY[500]}
+					/>
+				</TouchableOpacity>
+				<View style={styles.menuImageContainer}>
+					<Image
+						source={{
+							uri: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Food.png',
+						}}
+						style={styles.image}
+					/>
+				</View>
+				<TouchableOpacity activeOpacity={0.7}>
+					<Icon.PlusCircle
+						height={theme.DLS.SIZE[4]}
+						width={theme.DLS.SIZE[3]}
+						stroke={theme.DLS.COLOR.BACKGROUND[200]}
+						fill={theme.DLS.COLOR.PRIMARY[500]}
+					/>
+				</TouchableOpacity>
+				<Typography variant={'heading-md-bold'} style={styles.count}>
+					{'1'}
+				</Typography>
+			</View>
 			<Modal
 				animationType='none'
 				transparent={modalVisible}
@@ -108,7 +136,6 @@ const MenuCard = (props: IMenuCardProps) => {
 						fill={theme.DLS.COLOR.BACKGROUND[300]}
 					/>
 				</TouchableOpacity>
-
 				<View style={styles.modalContainer}>
 					<Typography
 						variant={'heading-sm-bold'}

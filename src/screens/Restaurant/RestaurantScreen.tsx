@@ -5,7 +5,8 @@ import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { generateStyles } from './RestaurantScreen.styles';
 import { useRoute } from '@react-navigation/native';
 import React, { useCallback, useState } from 'react';
-import { ScrollView, View, Image } from 'react-native';
+import { ScrollView, View, Image, TouchableOpacity } from 'react-native';
+import * as Icon from 'react-native-feather';
 import { useTheme } from 'styled-components/native';
 
 const RestaurantScreen = () => {
@@ -91,33 +92,42 @@ const RestaurantScreen = () => {
 	}
 
 	return (
-		<ScrollView style={styles.restaurantPage}>
-			<View style={styles.imageContainer}>
-				<Image source={{ uri: url }} style={styles.image} />
-			</View>
-			<View style={styles.detailsContainer}>
-				<View style={styles.designContainer}></View>
-			</View>
-			<View style={styles.headingContainer}>
-				<Typography variant={'heading-sm-bold'} style={styles.title}>
-					{title}
-				</Typography>
-				<Typography variant={'body-base-bold'} style={styles.subtitle}>
-					{subtitle}
-				</Typography>
-			</View>
-			<RestaurantDetailsCard
-				rating={rating}
-				deliveryTime={deliveryTime}
-				foodDescription={foodDescription}
-				freeDeliveryText={freeDeliveryText}
-			/>
-			<View style={styles.headingContainer}>
-				<Typography variant={'heading-sm-bold'} style={styles.title}>
-					{'Recommended Menu'}
-				</Typography>
-			</View>
-			<View style={styles.menuContainer}>
+		<>
+			<ScrollView style={styles.restaurantPage}>
+				<View style={styles.imageContainer}>
+					<Image source={{ uri: url }} style={styles.image} />
+				</View>
+				<View style={styles.detailsContainer}>
+					<View style={styles.designContainer}></View>
+				</View>
+				<View style={styles.headingContainer}>
+					<Typography
+						variant={'heading-sm-bold'}
+						style={styles.title}
+					>
+						{title}
+					</Typography>
+					<Typography
+						variant={'body-base-bold'}
+						style={styles.subtitle}
+					>
+						{subtitle}
+					</Typography>
+				</View>
+				<RestaurantDetailsCard
+					rating={rating}
+					deliveryTime={deliveryTime}
+					foodDescription={foodDescription}
+					freeDeliveryText={freeDeliveryText}
+				/>
+				<View style={styles.headingContainer}>
+					<Typography
+						variant={'heading-sm-bold'}
+						style={styles.title}
+					>
+						{'Recommended Menu'}
+					</Typography>
+				</View>
 				{menu.map((item) => {
 					const {
 						tag = '',
@@ -145,8 +155,40 @@ const RestaurantScreen = () => {
 						/>
 					);
 				})}
-			</View>
-		</ScrollView>
+			</ScrollView>
+			<TouchableOpacity activeOpacity={0.95} style={styles.stickyCart}>
+				<View style={styles.cartContainer}>
+					<Icon.ShoppingCart
+						height={theme.DLS.SIZE[4]}
+						width={theme.DLS.SIZE[4]}
+						stroke={theme.DLS.COLOR.BACKGROUND[500]}
+						fill={theme.DLS.COLOR.BACKGROUND[500]}
+					/>
+					<View style={styles.itemCountContainer}>
+						<Typography
+							variant={'heading-sm-bold'}
+							style={styles.itemCount}
+						>
+							{'1'}
+						</Typography>
+					</View>
+				</View>
+				<View style={styles.placeOrder}>
+					<Typography
+						variant={'heading-sm-bold'}
+						style={styles.viewCartText}
+					>
+						{'Place Order'}
+					</Typography>
+					<Typography
+						variant={'heading-sm-bold'}
+						style={styles.totalAmount}
+					>
+						{'₹500'}
+					</Typography>
+				</View>
+			</TouchableOpacity>
+		</>
 	);
 };
 

@@ -20,7 +20,7 @@ export const generateStyles = (theme: any) => {
 			elevation: 3,
 		},
 		dishContainer: {
-			width: theme.DLS.SIZE[20],
+			width: theme.DLS.SIZE[19],
 			flexDirection: 'column',
 		},
 		tagContainer: {
@@ -64,6 +64,9 @@ export const generateStyles = (theme: any) => {
 		},
 		dishCountContainer: {
 			flexDirection: 'row',
+			justifyContent: 'center',
+			alignContent: 'center',
+			alignItems: 'center',
 		},
 		descriptionContainer: {
 			alignSelf: 'flex-start',
@@ -114,6 +117,31 @@ export const generateStyles = (theme: any) => {
 		},
 		circle: {
 			marginRight: theme.DLS.SIZE[1],
+			marginTop: theme.DLS.SIZE[0.5],
+		},
+		menuImageContainer: {
+			justifyContent: 'center',
+			alignContent: 'center',
+			alignItems: 'center',
+			width: theme.DLS.SIZE[10],
+			height: theme.DLS.SIZE[10],
+			borderRadius: theme.DLS.BORDER_RADIUS[3],
+			marginHorizontal: theme.DLS.SIZE[1],
+			opacity: 0.5,
+		},
+		image: {
+			width: '100%',
+			height: '100%',
+			resizeMode: 'contain',
+		},
+		count: {
+			position: 'absolute',
+			textShadowColor: theme.DLS.COLOR.SECONDARY[300],
+			textShadowRadius: 0.5,
+			textShadowOffset: {
+				width: 1,
+				height: 1,
+			},
 			marginTop: theme.DLS.SIZE[0.5],
 		},
 	});
