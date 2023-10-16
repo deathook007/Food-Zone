@@ -33,6 +33,9 @@ export const generateStyles = (theme: any) => {
 			textAlign: 'center',
 			paddingHorizontal: theme.DLS.SIZE[2],
 		},
+		utility: {
+			marginBottom: theme.DLS.SIZE[12],
+		},
 		title: {
 			color: theme.DLS.COLOR.TEXT.PRIMARY_TEXT,
 			textShadowColor: theme.DLS.COLOR.PRIMARY[300],

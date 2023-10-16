@@ -151,6 +151,7 @@ const RestaurantScreen = () => {
 						/>
 					);
 				})}
+				<View style={styles.utility} />
 			</ScrollView>
 			{cartItems.length > 0 && (
 				<TouchableOpacity
