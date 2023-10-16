@@ -14,7 +14,7 @@ export const generateStyles = (theme: any) => {
 			flexDirection: 'column',
 			justifyContent: 'flex-end',
 			backgroundColor: theme.DLS.COLOR.BACKGROUND[100],
-			borderBottomRightRadius: '80%',
+			borderBottomRightRadius: 100,
 		},
 		image: {
 			width: '100%',

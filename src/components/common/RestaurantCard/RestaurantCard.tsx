@@ -2,7 +2,7 @@ import Typography from '../../../dls/Typography';
 import { generateStyles } from './RestaurantCard.styles';
 import { IRestaurantCardProps } from './RestaurantCard.types';
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, TouchableOpacity } from 'react-native';
 import * as Icon from 'react-native-feather';
 import { useTheme } from 'styled-components/native';
 
@@ -16,13 +16,18 @@ const RestaurantCard = (props: IRestaurantCardProps) => {
 		foodDescription = '',
 		freeDeliveryText = '',
 		discount,
+		handleVegRestaurantNavigation,
 	} = props;
 
 	const theme = useTheme();
 	const styles = generateStyles(theme);
 
 	return (
-		<View style={styles.container}>
+		<TouchableOpacity
+			activeOpacity={0.7}
+			onPress={() => handleVegRestaurantNavigation(props)}
+			style={styles.container}
+		>
 			<View style={styles.imageContainer}>
 				<Image source={{ uri: ulr }} style={styles.image} />
 			</View>
@@ -84,7 +89,7 @@ const RestaurantCard = (props: IRestaurantCardProps) => {
 					</Typography>
 				</View>
 			)}
-		</View>
+		</TouchableOpacity>
 	);
 };
 

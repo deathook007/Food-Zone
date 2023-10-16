@@ -111,23 +111,21 @@ const HomeScreen = () => {
 					showsHorizontalScrollIndicator={false}
 					keyExtractor={(item) => item.id}
 					renderItem={({ item }) => (
-						<TouchableOpacity
-							activeOpacity={0.7}
-							onPress={() => handleVegRestaurantNavigation(item)}
-						>
-							<RestaurantCard
-								key={item.id}
-								id={item.id}
-								ulr={item.url}
-								title={item.title}
-								subtitle={item?.subtitle}
-								rating={item.rating}
-								deliveryTime={item.deliveryTime}
-								foodDescription={item?.foodDescription}
-								freeDeliveryText={item.freeDeliveryText}
-								discount={item?.discount}
-							/>
-						</TouchableOpacity>
+						<RestaurantCard
+							key={item.id}
+							id={item.id}
+							ulr={item.url}
+							title={item.title}
+							subtitle={item?.subtitle}
+							rating={item.rating}
+							deliveryTime={item.deliveryTime}
+							foodDescription={item?.foodDescription}
+							freeDeliveryText={item.freeDeliveryText}
+							discount={item?.discount}
+							handleVegRestaurantNavigation={
+								handleVegRestaurantNavigation
+							}
+						/>
 					)}
 				/>
 			</View>
