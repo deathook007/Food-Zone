@@ -3,6 +3,7 @@
 - Testing Credintials
 - - Email: test@gmail.com
 - - Password: Test@#$123
+- - Video Link: https://drive.google.com/file/d/15e7n9tSpFztPCegxphZoPimJJL2cvgJf/view?usp=sharing
 
 ![screenshot](https://raw.githubusercontent.com/deathook007/TestImages/main/Onboarding3.png)
 ![screenshot](https://raw.githubusercontent.com/deathook007/TestImages/main/SignUpScreen.png)
