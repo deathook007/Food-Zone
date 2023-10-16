@@ -45,33 +45,33 @@ export default function App() {
 			<ThemeProvider theme={currentTheme}>
 				<NavigationContainer>
 					<Stack.Navigator>
-						<Stack.Screen
+						{/* <Stack.Screen
 							name={SCREEN_NAME.ONBOARDING_SCREEN}
 							component={OnboardingScreen}
 						/>
 						{user ? (
-							<>
-								<Stack.Screen
-									name={SCREEN_NAME.HOME_SCREEN}
-									component={HomeScreen}
-								/>
-								<Stack.Screen
-									name={SCREEN_NAME.RESTAURANT_SCREEN}
-									component={RestaurantScreen}
-								/>
-								<Stack.Screen
-									name={SCREEN_NAME.CART_SCREEN}
-									component={CartScreen}
-								/>
-								<Stack.Screen
-									name={SCREEN_NAME.ORDER_PROCESSING}
-									component={OrderProcessing}
-								/>
-								<Stack.Screen
-									name={SCREEN_NAME.DELIVERY_SCREEN}
-									component={DeliveryScreen}
-								/>
-							</>
+							<> */}
+						<Stack.Screen
+							name={SCREEN_NAME.HOME_SCREEN}
+							component={HomeScreen}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.RESTAURANT_SCREEN}
+							component={RestaurantScreen}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.CART_SCREEN}
+							component={CartScreen}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.ORDER_PROCESSING}
+							component={OrderProcessing}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.DELIVERY_SCREEN}
+							component={DeliveryScreen}
+						/>
+						{/* </>
 						) : (
 							<>
 								<Stack.Screen
@@ -83,7 +83,7 @@ export default function App() {
 									component={LoginScreen}
 								/>
 							</>
-						)}
+						)} */}
 					</Stack.Navigator>
 				</NavigationContainer>
 			</ThemeProvider>

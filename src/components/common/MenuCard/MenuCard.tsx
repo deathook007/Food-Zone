@@ -169,7 +169,7 @@ const MenuCard = (props: IMenuCardProps) => {
 						variant={'heading-sm-bold'}
 						style={styles.modalTitle}
 					>
-						{description}
+						{`🍽️ Dish Highlights:`}
 					</Typography>
 					<View style={styles.titleContainer}>
 						<Icon.Circle
