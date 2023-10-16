@@ -31,5 +31,6 @@ export const generateStyles = (theme: any) => {
 		cartItems: {
 			flexDirection: 'column',
 		},
+		orderSummary: {},
 	});
 };

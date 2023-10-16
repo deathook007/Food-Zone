@@ -1,6 +1,6 @@
 import AddressCard from '../../components/common/AddressCard/AddressCard';
 import CartItem from '../../components/common/CartItem/CartItem';
-import MenuCard from '../../components/common/MenuCard/MenuCard';
+import PaymentSummary from '../../components/common/PaymentSummary/PaymentSummary';
 import Typography from '../../dls/Typography';
 import data from '../screenData.json';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
@@ -14,7 +14,7 @@ import { useTheme } from 'styled-components/native';
 const CartScreen = () => {
 	hideDefaultHeaded();
 
-	const { address, cartItem = [] } = data || {};
+	const { address, cartItem = [], amountSummary = [] } = data || {};
 
 	const {
 		url = '',
@@ -34,49 +34,54 @@ const CartScreen = () => {
 	}, []);
 
 	return (
-		<ScrollView style={styles.cartScreen}>
-			<View>
-				<Image source={{ uri: url }} style={styles.image} />
-				<View style={styles.header}>
-					<TouchableOpacity
-						activeOpacity={0.7}
-						onPress={handleBackPress}
-					>
-						<Icon.ArrowLeftCircle
-							height={theme.DLS.SIZE[5]}
-							width={theme.DLS.SIZE[5]}
-							stroke={theme.DLS.COLOR.BACKGROUND[500]}
-							fill={theme.DLS.COLOR.BACKGROUND[100]}
-						/>
-					</TouchableOpacity>
-					<View style={styles.title}>
-						<Typography
-							variant={'heading-md-bold'}
-							style={styles.title}
+		<>
+			<ScrollView style={styles.cartScreen}>
+				<View>
+					<Image source={{ uri: url }} style={styles.image} />
+					<View style={styles.header}>
+						<TouchableOpacity
+							activeOpacity={0.7}
+							onPress={handleBackPress}
 						>
-							{'Cart Checkout'}
-						</Typography>
+							<Icon.ArrowLeftCircle
+								height={theme.DLS.SIZE[5]}
+								width={theme.DLS.SIZE[5]}
+								stroke={theme.DLS.COLOR.BACKGROUND[500]}
+								fill={theme.DLS.COLOR.BACKGROUND[100]}
+							/>
+						</TouchableOpacity>
+						<View style={styles.title}>
+							<Typography
+								variant={'heading-md-bold'}
+								style={styles.title}
+							>
+								{'Cart Checkout'}
+							</Typography>
+						</View>
 					</View>
+					<AddressCard
+						timeFromHome={timeFromHome}
+						tag={tag}
+						currentAddress={currentAddress}
+					/>
 				</View>
-				<AddressCard
-					timeFromHome={timeFromHome}
-					tag={tag}
-					currentAddress={currentAddress}
-				/>
+				<View style={styles.cartItems}>
+					{cartItem.map((item) => {
+						return (
+							<CartItem
+								title={item.title}
+								rating={item.rating}
+								image={item.image}
+								totalAmount={item.totalAmount}
+							/>
+						);
+					}, [])}
+				</View>
+			</ScrollView>
+			<View style={styles.orderSummary}>
+				<PaymentSummary amountSummary={amountSummary} />
 			</View>
-			<View style={styles.cartItems}>
-				{cartItem.map((item) => {
-					return (
-						<CartItem
-							title={item.title}
-							rating={item.rating}
-							image={item.image}
-							totalAmount={item.totalAmount}
-						/>
-					);
-				}, [])}
-			</View>
-		</ScrollView>
+		</>
 	);
 };
 

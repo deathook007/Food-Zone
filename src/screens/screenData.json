@@ -192,6 +192,47 @@
 			"rating": "4.4 (500)",
 			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
 			"totalAmount": "₹500"
+		},
+		{
+			"id": 2,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		},
+		{
+			"id": 3,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		},
+		{
+			"id": 4,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		}
+	],
+	"amountSummary": [
+		{
+			"id": "1",
+			"title": "Total Payable",
+			"value": "₹500",
+			"showDashedLine": true
+		},
+		{
+			"id": "2",
+			"title": "Total Payable",
+			"value": "₹500",
+			"showDashedLine": true
+		},
+		{
+			"id": "3",
+			"title": "Total Payable",
+			"value": "₹500",
+			"showDashedLine": false
 		}
 	]
 }
