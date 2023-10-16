@@ -1,13 +1,16 @@
+import { selectCartItemById } from '../../../../slices/cartSlice';
 import Typography from '../../../dls/Typography';
 import { generateStyles } from './MenuCard.styles';
 import { IMenuCardProps } from './MenuCard.types';
 import React, { useCallback } from 'react';
 import { View, TouchableOpacity, Modal, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
+import { useSelector } from 'react-redux';
 import { useTheme } from 'styled-components/native';
 
 const MenuCard = (props: IMenuCardProps) => {
 	const {
+		id,
 		tag = '',
 		title = '',
 		actualPrice = '',
@@ -17,12 +20,16 @@ const MenuCard = (props: IMenuCardProps) => {
 		image = '',
 		buttonText = '',
 		modalVisible = true,
+		handleNegativeCount,
+		handlePositiveCount,
 		setModalVisible,
 		handleModalToggle,
 	} = props;
 
 	const theme = useTheme();
 	const styles = generateStyles(theme);
+
+	const totalItems = useSelector((state) => selectCartItemById(state, id));
 
 	const handleModalPress = useCallback(() => {
 		setModalVisible(false);
@@ -100,7 +107,11 @@ const MenuCard = (props: IMenuCardProps) => {
 				)}
 			</View>
 			<View style={styles.dishCountContainer}>
-				<TouchableOpacity activeOpacity={0.7}>
+				<TouchableOpacity
+					disabled={totalItems.length === 0}
+					activeOpacity={0.7}
+					onPress={() => handleNegativeCount(id)}
+				>
 					<Icon.MinusCircle
 						height={theme.DLS.SIZE[3]}
 						width={theme.DLS.SIZE[3]}
@@ -111,12 +122,15 @@ const MenuCard = (props: IMenuCardProps) => {
 				<View style={styles.menuImageContainer}>
 					<Image
 						source={{
-							uri: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Food.png',
+							uri: image,
 						}}
 						style={styles.image}
 					/>
 				</View>
-				<TouchableOpacity activeOpacity={0.7}>
+				<TouchableOpacity
+					activeOpacity={0.7}
+					onPress={() => handlePositiveCount(props)}
+				>
 					<Icon.PlusCircle
 						height={theme.DLS.SIZE[4]}
 						width={theme.DLS.SIZE[3]}
@@ -124,8 +138,8 @@ const MenuCard = (props: IMenuCardProps) => {
 						fill={theme.DLS.COLOR.PRIMARY[500]}
 					/>
 				</TouchableOpacity>
-				<Typography variant={'heading-md-bold'} style={styles.count}>
-					{'1'}
+				<Typography variant={'heading-lg-bold'} style={styles.count}>
+					{totalItems?.length}
 				</Typography>
 			</View>
 			<Modal
@@ -155,7 +169,7 @@ const MenuCard = (props: IMenuCardProps) => {
 						variant={'heading-sm-bold'}
 						style={styles.modalTitle}
 					>
-						{description}
+						{`🍽️ Dish Highlights:`}
 					</Typography>
 					<View style={styles.titleContainer}>
 						<Icon.Circle

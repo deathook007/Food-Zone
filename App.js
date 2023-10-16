@@ -11,10 +11,12 @@ import { OrderProcessing } from './src/screens/OrderProcessing/OrderProcessing';
 import RestaurantScreen from './src/screens/Restaurant/RestaurantScreen';
 import SignupScreen from './src/screens/Signup/SignupScreen';
 import { SCREEN_NAME } from './src/screens/screens.names';
+import { store } from './store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import User, { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 import { useState, useMemo, useEffect } from 'react';
+import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components/native';
 
 const Stack = createNativeStackNavigator();
@@ -39,51 +41,52 @@ export default function App() {
 	}, [selectedTheme]);
 
 	return (
-		// The ThemeProvider integrates a theme tree object into the application.
-		<ThemeProvider theme={currentTheme}>
-			<NavigationContainer>
-				<Stack.Navigator>
-					{/* <Stack.Screen
-						name={SCREEN_NAME.ONBOARDING_SCREEN}
-						component={OnboardingScreen}
-					/> */}
-					{/* {user ? ( */}
-					<>
+		<Provider store={store}>
+			<ThemeProvider theme={currentTheme}>
+				<NavigationContainer>
+					<Stack.Navigator>
 						<Stack.Screen
-							name={SCREEN_NAME.HOME_SCREEN}
-							component={HomeScreen}
+							name={SCREEN_NAME.ONBOARDING_SCREEN}
+							component={OnboardingScreen}
 						/>
-						<Stack.Screen
-							name={SCREEN_NAME.RESTAURANT_SCREEN}
-							component={RestaurantScreen}
-						/>
-						<Stack.Screen
-							name={SCREEN_NAME.CART_SCREEN}
-							component={CartScreen}
-						/>
-						<Stack.Screen
-							name={SCREEN_NAME.ORDER_PROCESSING}
-							component={OrderProcessing}
-						/>
-						<Stack.Screen
-							name={SCREEN_NAME.DELIVERY_SCREEN}
-							component={DeliveryScreen}
-						/>
-					</>
-					{/* ) : ( */}
-					{/* <>
-							<Stack.Screen
-								name={SCREEN_NAME.SIGNUP_SCREEN}
-								component={SignupScreen}
-							/>
-							<Stack.Screen
-								name={SCREEN_NAME.LOGIN_SCREEN}
-								component={LoginScreen}
-							/>
-						</> */}
-					{/* )} */}
-				</Stack.Navigator>
-			</NavigationContainer>
-		</ThemeProvider>
+						{user ? (
+							<>
+								<Stack.Screen
+									name={SCREEN_NAME.HOME_SCREEN}
+									component={HomeScreen}
+								/>
+								<Stack.Screen
+									name={SCREEN_NAME.RESTAURANT_SCREEN}
+									component={RestaurantScreen}
+								/>
+								<Stack.Screen
+									name={SCREEN_NAME.CART_SCREEN}
+									component={CartScreen}
+								/>
+								<Stack.Screen
+									name={SCREEN_NAME.ORDER_PROCESSING}
+									component={OrderProcessing}
+								/>
+								<Stack.Screen
+									name={SCREEN_NAME.DELIVERY_SCREEN}
+									component={DeliveryScreen}
+								/>
+							</>
+						) : (
+							<>
+								<Stack.Screen
+									name={SCREEN_NAME.SIGNUP_SCREEN}
+									component={SignupScreen}
+								/>
+								<Stack.Screen
+									name={SCREEN_NAME.LOGIN_SCREEN}
+									component={LoginScreen}
+								/>
+							</>
+						)}
+					</Stack.Navigator>
+				</NavigationContainer>
+			</ThemeProvider>
+		</Provider>
 	);
 }

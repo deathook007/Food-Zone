@@ -1,3 +1,9 @@
+import {
+	removeFromCart,
+	selectCartItems,
+	selectCartTotal,
+} from '../../../slices/cartSlice';
+import { selectRestaurant } from '../../../slices/restaurantSlice';
 import AddressCard from '../../components/common/AddressCard/AddressCard';
 import CartItem from '../../components/common/CartItem/CartItem';
 import PaymentSummary from '../../components/common/PaymentSummary/PaymentSummary';
@@ -7,15 +13,23 @@ import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { generateStyles } from './CartScreen.styles';
 import { useNavigation } from '@react-navigation/native';
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { ScrollView, View, TouchableOpacity, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useTheme } from 'styled-components/native';
 
 const CartScreen = () => {
+	const [groupItems, setGroupItems] = useState({});
+
+	const cartItems = useSelector(selectCartItems);
+
+	const cartTotal = useSelector(selectCartTotal);
+
 	hideDefaultHeaded();
 
-	const { address, cartItem = [], amountSummary = [] } = data || {};
+	const { address, amountSummary = [] } = data || {};
 
 	const {
 		url = '',
@@ -30,6 +44,8 @@ const CartScreen = () => {
 
 	const navigation = useNavigation();
 
+	const dispatch = useDispatch();
+
 	const handleBackPress = useCallback(() => {
 		navigation.goBack();
 	}, []);
@@ -37,6 +53,28 @@ const CartScreen = () => {
 	const handleOnPaceOrder = useCallback(() => {
 		navigation.navigate(SCREEN_NAME.ORDER_PROCESSING as never);
 	}, []);
+
+	const handleRemoveItem = useCallback((idToRemove) => {
+		dispatch(removeFromCart({ id: idToRemove }));
+	}, []);
+
+	useEffect(() => {
+		const items = cartItems.reduce((group, item) => {
+			if (group[item.id]) {
+				group[item.id].push(item);
+			} else {
+				group[item.id] = [item];
+			}
+			return group;
+		}, {});
+		setGroupItems(items);
+	}, [cartItems]);
+
+	useEffect(() => {
+		if (cartTotal === 0) {
+			navigation.goBack();
+		}
+	}, [cartTotal]);
 
 	return (
 		<>
@@ -71,14 +109,17 @@ const CartScreen = () => {
 					/>
 				</View>
 				<View style={styles.cartItems}>
-					{cartItem.map((item) => {
+					{Object.entries(groupItems).map(([key, items]) => {
+						let dish = items[0];
 						return (
 							<CartItem
-								key={item.id}
-								title={item.title}
-								rating={item.rating}
-								image={item.image}
-								totalAmount={item.totalAmount}
+								key={key}
+								id={dish.id}
+								title={dish.title}
+								image={dish.image}
+								totalAmount={dish.price}
+								totalItem={items.length}
+								handleRemoveItem={handleRemoveItem}
 							/>
 						);
 					}, [])}

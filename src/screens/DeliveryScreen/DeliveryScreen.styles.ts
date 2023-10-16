@@ -3,34 +3,26 @@ import { StyleSheet } from 'react-native';
 export const generateStyles = (theme: any) => {
 	return StyleSheet.create({
 		container: {
-			width: '100%',
 			flex: 1,
-			justifyContent: 'center',
-			alignItems: 'center',
-			alignContent: 'center',
 			backgroundColor: theme.DLS.COLOR.PRIMARY[500],
 		},
-		textContainer: {
-			flexDirection: 'column',
-			justifyContent: 'center',
-			alignContent: 'center',
-			alignItems: 'center',
+		map: {
+			height: '70%',
+		},
+		deliveryDetails: {
+			flex: 1,
+			backgroundColor: theme.DLS.COLOR.PRIMARY[100],
+			borderTopLeftRadius: theme.DLS.BORDER_RADIUS[3],
+			borderTopRightRadius: theme.DLS.BORDER_RADIUS[3],
+		},
+		deliveryPerson: {
+			marginTop: theme.DLS.SIZE[10],
 			marginHorizontal: theme.DLS.SIZE[2],
 		},
-		title: {
-			textAlign: 'center',
-			textShadowColor: theme.DLS.COLOR.PRIMARY[200],
-			textShadowRadius: 1,
-			textShadowOffset: {
-				width: 0,
-				height: 1,
-			},
-			color: theme.DLS.COLOR.PRIMARY[200],
-		},
-		subtitle: {
-			textAlign: 'center',
-			marginTop: theme.DLS.SIZE[1],
-			color: theme.DLS.COLOR.PRIMARY[300],
+		progressCard: {
+			position: 'absolute',
+			top: '62%',
+			left: '3%',
 		},
 	});
 };

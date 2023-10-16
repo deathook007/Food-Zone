@@ -1,13 +1,20 @@
 import Typography from '../../../dls/Typography';
 import { generateStyles } from './CartItem.styles';
 import { IMenuCardProps } from './CartItem.types';
-import React, { useCallback } from 'react';
-import { View, TouchableOpacity, Modal, Image } from 'react-native';
+import React from 'react';
+import { View, TouchableOpacity, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
 import { useTheme } from 'styled-components/native';
 
 const CartItem = (props: IMenuCardProps) => {
-	const { title = '', rating = '', image = '', totalAmount = '' } = props;
+	const {
+		id,
+		title = '',
+		image = '',
+		totalAmount = '',
+		totalItem,
+		handleRemoveItem,
+	} = props;
 
 	const theme = useTheme();
 	const styles = generateStyles(theme);
@@ -18,7 +25,10 @@ const CartItem = (props: IMenuCardProps) => {
 				<Typography variant={'body-base-bold'}>{title}</Typography>
 			</View>
 			<View style={styles.quantityContainer}>
-				<TouchableOpacity activeOpacity={0.7}>
+				<TouchableOpacity
+					activeOpacity={0.7}
+					onPress={() => handleRemoveItem(id)}
+				>
 					<Icon.MinusCircle
 						height={theme.DLS.SIZE[3]}
 						width={theme.DLS.SIZE[3]}
@@ -29,7 +39,7 @@ const CartItem = (props: IMenuCardProps) => {
 				<View style={styles.menuImageContainer}>
 					<Image
 						source={{
-							uri: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Food.png',
+							uri: image,
 						}}
 						style={styles.image}
 					/>
@@ -37,7 +47,7 @@ const CartItem = (props: IMenuCardProps) => {
 						variant={'heading-md-bold'}
 						style={styles.count}
 					>
-						{'1'}
+						{totalItem}
 					</Typography>
 				</View>
 				<Typography variant={'heading-sm-bold'}>

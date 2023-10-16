@@ -40,13 +40,14 @@ export const generateStyles = (theme: any) => {
 			alignItems: 'center',
 			width: theme.DLS.SIZE[7],
 			height: theme.DLS.SIZE[7],
-			borderRadius: theme.DLS.BORDER_RADIUS[3],
+			borderRadius: theme.DLS.SIZE[7],
 			marginHorizontal: theme.DLS.SIZE[1],
 		},
 		image: {
 			width: '100%',
 			height: '100%',
-			resizeMode: 'contain',
+			resizeMode: 'cover',
+			borderRadius: theme.DLS.SIZE[7],
 			opacity: 0.6,
 		},
 		count: {

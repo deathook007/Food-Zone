@@ -1,5 +1,5 @@
 export interface IPaymentSummaryLineItems {
-	id: string;
+	id: number;
 	title: string;
 	titleColor?: string;
 	value: string;
@@ -10,5 +10,6 @@ export interface IPaymentSummaryLineItems {
 
 export interface IPaymentSummaryProps {
 	amountSummary: IPaymentSummaryLineItems[];
+	// cartTotal: number;
 	handleOnPaceOrder: () => void;
 }

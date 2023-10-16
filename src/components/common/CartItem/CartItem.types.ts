@@ -1,6 +1,8 @@
 export interface IMenuCardProps {
+	id: number;
 	title: string;
-	rating: string;
 	image: string;
 	totalAmount: string;
+	totalItem: number;
+	handleRemoveItem: (id: number) => void;
 }

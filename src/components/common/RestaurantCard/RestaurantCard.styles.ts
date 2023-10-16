@@ -26,10 +26,12 @@ export const generateStyles = (theme: any) => {
 			height: theme.DLS.SIZE[15],
 			borderTopLeftRadius: theme.DLS.BORDER_RADIUS[3],
 			borderTopRightRadius: theme.DLS.BORDER_RADIUS[3],
+			backgroundColor: theme.DLS.COLOR.BACKGROUND[100],
 		},
 		image: {
 			width: '100%',
 			height: '100%',
+			resizeMode: 'contain',
 			borderTopLeftRadius: theme.DLS.BORDER_RADIUS[3],
 			borderTopRightRadius: theme.DLS.BORDER_RADIUS[3],
 		},
@@ -40,7 +42,7 @@ export const generateStyles = (theme: any) => {
 		ratingContainer: {
 			flexDirection: 'row',
 			justifyContent: 'space-between',
-			marginTop: theme.DLS.SIZE[0.5],
+			marginTop: theme.DLS.SIZE[1],
 		},
 		rating: {
 			flexDirection: 'row',

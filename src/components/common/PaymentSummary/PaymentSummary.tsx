@@ -5,7 +5,13 @@ import { TouchableOpacity, View } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 const PaymentSummary = (props: IPaymentSummaryProps) => {
-	const { amountSummary = [], handleOnPaceOrder } = props;
+	const {
+		amountSummary = [],
+		// cartTotal,
+		handleOnPaceOrder,
+	} = props;
+
+	// We can use above cartTotal for payment summary but its better to get the pricing summary from seperate API, This logic should be in backend rather that frontend
 
 	const theme = useTheme();
 

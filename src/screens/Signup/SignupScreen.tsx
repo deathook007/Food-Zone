@@ -9,15 +9,8 @@ import { isEmailValid } from '../utility/validateEmailCheck';
 import { generateStyles } from './Signup.styles';
 import { useNavigation } from '@react-navigation/native';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React, { useCallback, useEffect, useState } from 'react';
-import {
-	View,
-	TextInput,
-	TouchableOpacity,
-	Image,
-	BackHandler,
-	Alert,
-} from 'react-native';
+import React, { useCallback, useState } from 'react';
+import { View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 const SignupScreen = () => {

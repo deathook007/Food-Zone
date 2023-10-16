@@ -17,221 +17,483 @@
 	"featuredFood": [
 		{
 			"id": 1,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"description": "Testing Restaurant"
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Briyani.png",
+			"description": "Briyani"
 		},
 		{
 			"id": 2,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"description": "Testing Restaurant"
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+			"description": "Noodles"
 		},
 		{
 			"id": 3,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"description": "Testing Restaurant"
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+			"description": "Burger"
 		},
 		{
 			"id": 4,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"description": "Testing Restaurant"
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Desert.png",
+			"description": "Desert"
 		},
 		{
 			"id": 5,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"description": "Testing Restaurant"
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Cake.png",
+			"description": "Cake"
 		},
 		{
 			"id": 6,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"description": "Testing Restaurant"
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles.png",
+			"description": "Chinese"
 		}
 	],
 	"vegRestaurantHeading": "Pure Veg Restaurants",
-	"vegRestaurantSubheading": "Pure Veg Restaurants",
+	"vegRestaurantSubheading": "Plant-Powered Vegetarian Paradise",
 	"seeAllButtonText": "See All",
 	"vegRestaurants": [
 		{
 			"id": 1,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Garden Grub Oasis",
+			"subtitle": "Where fresh, local ingredients create vibrant dishes",
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
+			"foodDescription": "2km from your location",
 			"freeDeliveryText": "Free delivery",
-			"discount": "50% off"
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 10,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Hakka Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 11,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Veg Supreme Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 12,
+					"type": "veg",
+					"tag": "Newly added",
+					"title": "Chocklate Dipped Softi",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Desert.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 2,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Leafy Delights Café",
+			"subtitle": "Vegetarian cuisine with flavored, plant based creations",
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off"
+			"foodDescription": "2km from your location",
+			"freeDeliveryText": "Free delivery",
+			"discount": "",
+			"menu": [
+				{
+					"id": 13,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Hakka Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 14,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Veg Supreme Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 15,
+					"type": "veg",
+					"tag": "Newly added",
+					"title": "Chocklate Dipped Softi",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Desert.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 3,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Herb & Spice Haven",
+			"subtitle": "Explore global inspired, herb and spicy vegetarian dishes",
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
+			"foodDescription": "2km from your location",
 			"freeDeliveryText": "Extra 10% Off",
-			"discount": "50% off"
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 16,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Hakka Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 17,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Veg Supreme Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 18,
+					"type": "veg",
+					"tag": "Newly added",
+					"title": "Chocklate Dipped Softi",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Desert.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 4,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "The Veggie Vineyard",
+			"subtitle": "A wine and vegetarian haven, where flavors harmonize",
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		},
-		{
-			"id": 5,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		},
-		{
-			"id": 6,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
+			"foodDescription": "2km from your location",
+			"freeDeliveryText": "Extra 10% Off",
+			"discount": "",
+			"menu": [
+				{
+					"id": 19,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Hakka Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 20,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Veg Supreme Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 21,
+					"type": "veg",
+					"tag": "Newly added",
+					"title": "Chocklate Dipped Softi",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Desert.png",
+					"buttonText": "Details"
+				}
+			]
 		}
 	],
 	"nonVegRestaurantHeading": "Non Veg Restaurants",
-	"nonVegRestaurantSubheading": "Non Veg Restaurants",
+	"nonVegRestaurantSubheading": "Meat Lover's Gastronomic Journey",
 	"nonVegRestaurants": [
 		{
-			"id": 1,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery",
-			"discount": "50% off"
-		},
-		{
-			"id": 2,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off"
-		},
-		{
-			"id": 3,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off",
-			"discount": "50% off"
-		},
-		{
-			"id": 4,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		},
-		{
 			"id": 5,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Meat Haven Grill & Bar",
+			"subtitle": "A paradise, serving up the juiciest cuts and delights",
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
+			"foodDescription": "2km from your location",
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 22,
+					"type": "veg",
+					"tag": "Hot & Spicy",
+					"title": "Briyani",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Briyani.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 23,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 24,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 6,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Ocean's Catch Seafood Grill",
+			"subtitle": "Dive into a world of seafood, straight from the ocean",
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
+			"foodDescription": "2km from your location",
+			"freeDeliveryText": "Free delivery",
+			"discount": "Trending",
+			"menu": [
+				{
+					"id": 25,
+					"type": "veg",
+					"tag": "Hot & Spicy",
+					"title": "Briyani",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Briyani.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 26,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 27,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Steakhouse Euphoria",
+			"subtitle": "Indulge in the finest cuts of meat and experience steak",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "2km from your location",
+			"freeDeliveryText": "Extra 10% Off",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 28,
+					"type": "veg",
+					"tag": "Hot & Spicy",
+					"title": "Briyani",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Briyani.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 29,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 30,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Restaurant.png",
+			"title": "Flame & Flavor BBQ Shack",
+			"subtitle": "A haven for barbecue enthusiasts and smoky delights",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "2km from your location",
+			"freeDeliveryText": "Free delivery",
+			"discount": "",
+			"menu": [
+				{
+					"id": 31,
+					"type": "veg",
+					"tag": "Hot & Spicy",
+					"title": "Briyani",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Briyani.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 32,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Burger",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Burger.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 33,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Chicken Noodles",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Indulge in this flavorful delight, perfect for a quick, satisfying meal.",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Noodles2.png",
+					"buttonText": "Details"
+				}
+			]
 		}
 	],
 	"address": {
 		"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/FoodCart.png",
 		"timeFromHome": "17 mins to home",
 		"tag": "Delivering superfast!",
-		"currentAddress": "Delivery current address"
+		"currentAddress": "Sector 2, HSR, Layout"
 	},
-	"cartItem": [
+	"amountSummary": [
 		{
 			"id": 1,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
+			"title": "Total Amount",
+			"value": "₹1000",
+			"showDashedLine": true
 		},
 		{
 			"id": 2,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
+			"title": "Net Discount",
+			"value": "₹350",
+			"showDashedLine": true
 		},
 		{
 			"id": 3,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
-		},
-		{
-			"id": 4,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
-		}
-	],
-	"amountSummary": [
-		{
-			"id": "1",
 			"title": "Total Payable",
-			"value": "₹500",
-			"showDashedLine": true
-		},
-		{
-			"id": "2",
-			"title": "Total Payable",
-			"value": "₹500",
-			"showDashedLine": true
-		},
-		{
-			"id": "3",
-			"title": "Total Payable",
-			"value": "₹500",
+			"value": "₹650",
 			"showDashedLine": false
 		}
 	],
@@ -239,5 +501,17 @@
 		"title": "Processing your Order",
 		"subtitle": "Waiting for Restaurant to accept your order"
 	},
-	"deliveryProcessing": {}
+	"deliveryProcessing": {
+		"title": "Estimated Arrival Time",
+		"subtitle": "16 to 25 Minutes",
+		"latitude": 12.90756,
+		"longitude": 77.64714,
+		"latitudeDelta": 0.01,
+		"longitudeDelta": 0.01,
+		"name": "Deepak Bhatt",
+		"deliveryPersonName": "Deepak Bhatt",
+		"address": "Sector 2, HSR LayouT",
+		"tag": "Your Rider",
+		"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Man.png"
+	}
 }
