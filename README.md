@@ -1,5 +1,9 @@
 # Demo of The App - SS
 
+- Testing Credintials
+- - Email: test@gmail.com
+- - Password: Test@#$123
+
 ![screenshot](https://raw.githubusercontent.com/deathook007/TestImages/main/Onboarding3.png)
 ![screenshot](https://raw.githubusercontent.com/deathook007/TestImages/main/SignUpScreen.png)
 ![screenshot](https://raw.githubusercontent.com/deathook007/TestImages/main/SignUpPasswordError.png)
