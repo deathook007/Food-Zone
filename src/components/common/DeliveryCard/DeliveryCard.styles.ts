@@ -4,10 +4,9 @@ export const generateStyles = (theme: any) => {
 	return StyleSheet.create({
 		container: {
 			width: theme.DLS.SIZE[42],
-			position: 'absolute',
 			flexDirection: 'row',
-			justifyContent: 'space-between',
 			paddingHorizontal: theme.DLS.SIZE[2],
+			paddingVertical: theme.DLS.SIZE[1],
 			borderWidth: theme.DLS.STROKE[3],
 			borderRadius: theme.DLS.BORDER_RADIUS[3],
 			borderColor: theme.DLS.COLOR.DIVIDER.SECONDARY_DIVIDER,
@@ -22,26 +21,24 @@ export const generateStyles = (theme: any) => {
 		},
 		timeContainer: {
 			flexDirection: 'column',
-			justifyContent: 'center',
-			alignContent: 'center',
-			alignItems: 'center',
+			paddingTop: theme.DLS.SIZE[2],
+			marginLeft: theme.DLS.SIZE[3],
 		},
 		imageContainer: {
 			justifyContent: 'center',
 			alignContent: 'center',
 			alignItems: 'center',
-			width: theme.DLS.SIZE[15],
-			height: theme.DLS.SIZE[15],
-			borderRadius: theme.DLS.BORDER_RADIUS[3],
+			width: theme.DLS.SIZE[10],
+			height: theme.DLS.SIZE[10],
+			borderRadius: theme.DLS.SIZE[5],
 		},
 		image: {
 			width: '100%',
 			height: '100%',
-			borderRadius: theme.DLS.BORDER_RADIUS[3],
-			resizeMode: 'contain',
+			borderRadius: theme.DLS.SIZE[5],
+			resizeMode: 'cover',
 		},
-		title: {
-			textAlign: 'center',
+		name: {
 			textShadowColor: theme.DLS.COLOR.PRIMARY[200],
 			textShadowRadius: 1,
 			textShadowOffset: {
@@ -50,11 +47,33 @@ export const generateStyles = (theme: any) => {
 			},
 			color: theme.DLS.COLOR.PRIMARY[200],
 		},
-		subtitle: {
-			textAlign: 'center',
+		tag: {
 			marginTop: theme.DLS.SIZE[1],
 			color: theme.DLS.COLOR.PRIMARY[300],
 			marginBottom: theme.DLS.SIZE[2],
+		},
+		iconContainer: {
+			width: theme.DLS.SIZE[10],
+			flexDirection: 'row',
+			justifyContent: 'space-between',
+			alignContent: 'center',
+			alignItems: 'center',
+			marginLeft: theme.DLS.SIZE[2],
+		},
+		phone: {
+			padding: theme.DLS.SIZE[1],
+			marginRight: theme.DLS.SIZE[1],
+			borderWidth: theme.DLS.STROKE[3],
+			borderRadius: theme.DLS.BORDER_RADIUS[3],
+			backgroundColor: theme.DLS.COLOR.SUCCESS[300],
+			borderColor: theme.DLS.COLOR.SUCCESS[500],
+		},
+		cross: {
+			padding: theme.DLS.SIZE[1],
+			borderWidth: theme.DLS.STROKE[3],
+			borderRadius: theme.DLS.BORDER_RADIUS[3],
+			backgroundColor: theme.DLS.COLOR.ERROR[300],
+			borderColor: theme.DLS.COLOR.ERROR[500],
 		},
 	});
 };
