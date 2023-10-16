@@ -1,5 +1,5 @@
 export interface IMenuCardProps {
-	id: string;
+	id: number;
 	tag?: string;
 	title: string;
 	actualPrice?: string;
@@ -10,7 +10,7 @@ export interface IMenuCardProps {
 	image: string;
 	buttonText?: string;
 	modalVisible: boolean;
-	handleNegativeCount: (id: string) => void;
+	handleNegativeCount: (id: number) => void;
 	handlePositiveCount: (menu: any) => void;
 	setModalVisible?: (value: boolean) => void;
 	handleModalToggle?: () => void;
