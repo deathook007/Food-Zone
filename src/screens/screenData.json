@@ -59,65 +59,51 @@
 			"deliveryTime": "16 mins",
 			"foodDescription": "Testing Description",
 			"freeDeliveryText": "Free delivery",
-			"discount": "50% off"
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 10,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 11,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 12,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 2,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off"
-		},
-		{
-			"id": 3,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off",
-			"discount": "50% off"
-		},
-		{
-			"id": 4,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		},
-		{
-			"id": 5,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		},
-		{
-			"id": 6,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		}
-	],
-	"nonVegRestaurantHeading": "Non Veg Restaurants",
-	"nonVegRestaurantSubheading": "Non Veg Restaurants",
-	"nonVegRestaurants": [
-		{
-			"id": 1,
 			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
 			"title": "Testing Restaurant",
 			"subtitle": "Testing Restaurant",
@@ -125,17 +111,48 @@
 			"deliveryTime": "16 mins",
 			"foodDescription": "Testing Description",
 			"freeDeliveryText": "Free delivery",
-			"discount": "50% off"
-		},
-		{
-			"id": 2,
-			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"title": "Testing Restaurant",
-			"subtitle": "Testing Restaurant",
-			"rating": "4.4 (10k+)",
-			"deliveryTime": "16 mins",
-			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off"
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 13,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 14,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 15,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 3,
@@ -145,8 +162,49 @@
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
 			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Extra 10% Off",
-			"discount": "50% off"
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 16,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 17,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 18,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 4,
@@ -156,8 +214,54 @@
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
 			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
-		},
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 19,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 20,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 21,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
+		}
+	],
+	"nonVegRestaurantHeading": "Non Veg Restaurants",
+	"nonVegRestaurantSubheading": "Non Veg Restaurants",
+	"nonVegRestaurants": [
 		{
 			"id": 5,
 			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
@@ -166,7 +270,49 @@
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
 			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 22,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 23,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 24,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
 		},
 		{
 			"id": 6,
@@ -176,7 +322,153 @@
 			"rating": "4.4 (10k+)",
 			"deliveryTime": "16 mins",
 			"foodDescription": "Testing Description",
-			"freeDeliveryText": "Free delivery"
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 25,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 26,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 27,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 28,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 29,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 30,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off",
+			"menu": [
+				{
+					"id": 31,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 32,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				},
+				{
+					"id": 33,
+					"type": "veg",
+					"tag": "Bestseller",
+					"title": "Dish Title",
+					"actualPrice": "₹300",
+					"discountedPrice": "₹100",
+					"price": 100,
+					"rating": "4.4 (500)",
+					"description": "Item Description",
+					"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+					"buttonText": "Details"
+				}
+			]
 		}
 	],
 	"address": {
@@ -185,36 +477,6 @@
 		"tag": "Delivering superfast!",
 		"currentAddress": "Delivery current address"
 	},
-	"cartItem": [
-		{
-			"id": 1,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
-		},
-		{
-			"id": 2,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
-		},
-		{
-			"id": 3,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
-		},
-		{
-			"id": 4,
-			"title": "Dish Title",
-			"rating": "4.4 (500)",
-			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
-			"totalAmount": "₹500"
-		}
-	],
 	"amountSummary": [
 		{
 			"id": "1",

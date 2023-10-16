@@ -37,8 +37,16 @@ const HomeScreen = () => {
 
 	const navigation = useNavigation();
 
-	const handleRestaurantNavigation = useCallback(() => {
-		navigation.navigate(SCREEN_NAME.RESTAURANT_SCREEN as never);
+	const handleVegRestaurantNavigation = useCallback((item) => {
+		navigation.navigate(SCREEN_NAME.RESTAURANT_SCREEN as never, {
+			item,
+		});
+	}, []);
+
+	const handleNonVegRestaurantNavigation = useCallback((item) => {
+		navigation.navigate(SCREEN_NAME.RESTAURANT_SCREEN as never, {
+			item,
+		});
 	}, []);
 
 	const handleListAllVegRestaurants = useCallback(() => {
@@ -105,7 +113,7 @@ const HomeScreen = () => {
 					renderItem={({ item }) => (
 						<TouchableOpacity
 							activeOpacity={0.7}
-							onPress={handleRestaurantNavigation}
+							onPress={() => handleVegRestaurantNavigation(item)}
 						>
 							<RestaurantCard
 								key={item.id}
@@ -159,7 +167,9 @@ const HomeScreen = () => {
 					renderItem={({ item }) => (
 						<TouchableOpacity
 							activeOpacity={0.7}
-							onPress={handleRestaurantNavigation}
+							onPress={() =>
+								handleNonVegRestaurantNavigation(item)
+							}
 						>
 							<RestaurantCard
 								key={item.id}

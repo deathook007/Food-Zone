@@ -1,3 +1,4 @@
+import { selectRestaurant } from '../../../slices/restaurantSlice';
 import AddressCard from '../../components/common/AddressCard/AddressCard';
 import CartItem from '../../components/common/CartItem/CartItem';
 import PaymentSummary from '../../components/common/PaymentSummary/PaymentSummary';
@@ -10,12 +11,14 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useCallback } from 'react';
 import { ScrollView, View, TouchableOpacity, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
+import { useSelector } from 'react-redux';
 import { useTheme } from 'styled-components/native';
 
 const CartScreen = () => {
+	const restaurant = useSelector(selectRestaurant);
 	hideDefaultHeaded();
 
-	const { address, cartItem = [], amountSummary = [] } = data || {};
+	const { address, amountSummary = [] } = data || {};
 
 	const {
 		url = '',
@@ -71,14 +74,14 @@ const CartScreen = () => {
 					/>
 				</View>
 				<View style={styles.cartItems}>
-					{cartItem.map((item) => {
+					{restaurant.menu.map((item) => {
 						return (
 							<CartItem
 								key={item.id}
 								title={item.title}
 								rating={item.rating}
 								image={item.image}
-								totalAmount={item.totalAmount}
+								totalAmount={item.discountedPrice}
 							/>
 						);
 					}, [])}

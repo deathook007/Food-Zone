@@ -1,28 +1,36 @@
+import { selectCartItemById } from '../../../../slices/cartSlice';
 import Typography from '../../../dls/Typography';
 import { generateStyles } from './MenuCard.styles';
 import { IMenuCardProps } from './MenuCard.types';
 import React, { useCallback } from 'react';
 import { View, TouchableOpacity, Modal, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
+import { useSelector } from 'react-redux';
 import { useTheme } from 'styled-components/native';
 
 const MenuCard = (props: IMenuCardProps) => {
 	const {
+		id,
 		tag = '',
 		title = '',
 		actualPrice = '',
 		discountedPrice = '',
+		price,
 		rating = '',
 		description = '',
 		image = '',
 		buttonText = '',
 		modalVisible = true,
+		handleNegativeCount,
+		handlePositiveCount,
 		setModalVisible,
 		handleModalToggle,
 	} = props;
 
 	const theme = useTheme();
 	const styles = generateStyles(theme);
+
+	const totalItems = useSelector((state) => selectCartItemById(state, id));
 
 	const handleModalPress = useCallback(() => {
 		setModalVisible(false);
@@ -100,7 +108,11 @@ const MenuCard = (props: IMenuCardProps) => {
 				)}
 			</View>
 			<View style={styles.dishCountContainer}>
-				<TouchableOpacity activeOpacity={0.7}>
+				<TouchableOpacity
+					disabled={totalItems.length === 0}
+					activeOpacity={0.7}
+					onPress={() => handleNegativeCount(id)}
+				>
 					<Icon.MinusCircle
 						height={theme.DLS.SIZE[3]}
 						width={theme.DLS.SIZE[3]}
@@ -116,7 +128,10 @@ const MenuCard = (props: IMenuCardProps) => {
 						style={styles.image}
 					/>
 				</View>
-				<TouchableOpacity activeOpacity={0.7}>
+				<TouchableOpacity
+					activeOpacity={0.7}
+					onPress={() => handlePositiveCount(props)}
+				>
 					<Icon.PlusCircle
 						height={theme.DLS.SIZE[4]}
 						width={theme.DLS.SIZE[3]}
@@ -125,7 +140,7 @@ const MenuCard = (props: IMenuCardProps) => {
 					/>
 				</TouchableOpacity>
 				<Typography variant={'heading-md-bold'} style={styles.count}>
-					{'1'}
+					{totalItems?.length}
 				</Typography>
 			</View>
 			<Modal

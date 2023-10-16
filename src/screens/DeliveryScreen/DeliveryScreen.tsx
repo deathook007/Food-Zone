@@ -2,6 +2,7 @@ import DeliveryCard from '../../components/common/DeliveryCard/DeliveryCard';
 import ProgressCard from '../../components/common/ProgressCard/ProgressCard';
 import Typography from '../../dls/Typography';
 import data from '../screenData.json';
+import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { generateStyles } from './DeliveryScreen.styles';
 import { useNavigation } from '@react-navigation/native';
@@ -32,14 +33,14 @@ export const DeliveryScreen = () => {
 
 	const styles = generateStyles(theme);
 
-	const navigation = useNavigation();
+	const navigation = useNavigation() as any;
 
 	const handleOutgoingCall = useCallback(() => {
 		Alert.alert('Handle outgoing calls! Work under progress');
 	}, []);
 
 	const handleCancelOrder = useCallback(() => {
-		navigation.goBack();
+		navigation.replace(SCREEN_NAME.HOME_SCREEN as never);
 	}, []);
 
 	return (

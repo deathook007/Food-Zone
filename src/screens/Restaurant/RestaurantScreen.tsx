@@ -1,3 +1,11 @@
+import {
+	addToCart,
+	removeFromCart,
+	selectCartItemById,
+	selectCartItems,
+	selectCartTotal,
+} from '../../../slices/cartSlice';
+import { setRestaurant } from '../../../slices/restaurantSlice';
 import MenuCard from '../../components/common/MenuCard/MenuCard';
 import RestaurantDetailsCard from '../../components/common/RestaurantDetailsCard/RestaurantDetailsCard';
 import Typography from '../../dls/Typography';
@@ -5,67 +13,20 @@ import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { generateStyles } from './RestaurantScreen.styles';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { ScrollView, View, Image, TouchableOpacity } from 'react-native';
 import * as Icon from 'react-native-feather';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useTheme } from 'styled-components/native';
 
 const RestaurantScreen = () => {
-	// const { params } = useRoute();
+	const { params } = useRoute();
 
-	// const item = params;
-
-	const item = {
-		id: 1,
-		url: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png',
-		title: 'Testing Restaurant',
-		subtitle: 'Testing Restaurant',
-		rating: '4.4 (10k+)',
-		deliveryTime: '16 mins',
-		foodDescription: 'Testing Description',
-		freeDeliveryText: 'Free delivery',
-		discount: '50% off',
-		menu: [
-			{
-				id: 1,
-				type: 'veg',
-				tag: 'Bestseller',
-				title: 'Dish Title',
-				actualPrice: '₹300',
-				discountedPrice: '₹100',
-				rating: '4.4 (500)',
-				description: 'Item Description',
-				image: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png',
-				buttonText: 'Details',
-			},
-			{
-				id: 2,
-				type: 'veg',
-				tag: 'Bestseller',
-				title: 'Dish Title',
-				actualPrice: '₹300',
-				discountedPrice: '₹100',
-				rating: '4.4 (500)',
-				description: 'Item Description',
-				image: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png',
-				buttonText: 'Details',
-			},
-			{
-				id: 3,
-				type: 'veg',
-				tag: 'Bestseller',
-				title: 'Dish Title',
-				actualPrice: '₹300',
-				discountedPrice: '₹100',
-				rating: '4.4 (500)',
-				description: 'Item Description',
-				image: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png',
-				buttonText: 'Details',
-			},
-		],
-	};
+	const { item }: any = params;
 
 	const {
+		id,
 		url = '',
 		title = '',
 		subtitle = '',
@@ -74,7 +35,13 @@ const RestaurantScreen = () => {
 		foodDescription = '',
 		freeDeliveryText = '',
 		menu = [],
-	} = item;
+	} = item || {};
+
+	const cartItems = useSelector(selectCartItems);
+
+	const totalItems = useSelector((state) => selectCartItems(state));
+
+	const cartTotal = useSelector(selectCartTotal);
 
 	hideDefaultHeaded();
 
@@ -86,12 +53,28 @@ const RestaurantScreen = () => {
 
 	const navigation = useNavigation();
 
+	const dispatch = useDispatch();
+
 	const handleModalToggle = useCallback(() => {
 		setModalVisible((modalVisible) => !modalVisible);
 	}, []);
 
 	const handleCartNavigation = useCallback(() => {
 		navigation.navigate(SCREEN_NAME.CART_SCREEN as never);
+	}, []);
+
+	const handleNegativeCount = useCallback((idToRemove) => {
+		dispatch(removeFromCart({ id: idToRemove }));
+	}, []);
+
+	const handlePositiveCount = useCallback((menuToAdd) => {
+		dispatch(addToCart({ ...menuToAdd }));
+	}, []);
+
+	useEffect(() => {
+		if (item && item.id) {
+			dispatch(setRestaurant({ ...item }));
+		}
 	}, []);
 
 	if (!menu || menu.length === 0) {
@@ -142,6 +125,7 @@ const RestaurantScreen = () => {
 						title = '',
 						actualPrice = '',
 						discountedPrice = '',
+						price,
 						rating = '',
 						description = '',
 						image = '',
@@ -149,11 +133,13 @@ const RestaurantScreen = () => {
 					} = item || {};
 					return (
 						<MenuCard
+							id={id}
 							key={id}
 							tag={tag}
 							title={title}
 							actualPrice={actualPrice}
 							discountedPrice={discountedPrice}
+							price={price}
 							rating={rating}
 							description={description}
 							image={image}
@@ -161,46 +147,50 @@ const RestaurantScreen = () => {
 							modalVisible={modalVisible}
 							setModalVisible={setModalVisible}
 							handleModalToggle={handleModalToggle}
+							handleNegativeCount={handleNegativeCount}
+							handlePositiveCount={handlePositiveCount}
 						/>
 					);
 				})}
 			</ScrollView>
-			<TouchableOpacity
-				activeOpacity={0.95}
-				onPress={handleCartNavigation}
-				style={styles.stickyCart}
-			>
-				<View style={styles.cartContainer}>
-					<Icon.ShoppingCart
-						height={theme.DLS.SIZE[4]}
-						width={theme.DLS.SIZE[4]}
-						stroke={theme.DLS.COLOR.BACKGROUND[500]}
-						fill={theme.DLS.COLOR.BACKGROUND[500]}
-					/>
-					<View style={styles.itemCountContainer}>
+			{cartItems.length > 0 && (
+				<TouchableOpacity
+					activeOpacity={0.95}
+					onPress={handleCartNavigation}
+					style={styles.stickyCart}
+				>
+					<View style={styles.cartContainer}>
+						<Icon.ShoppingCart
+							height={theme.DLS.SIZE[4]}
+							width={theme.DLS.SIZE[4]}
+							stroke={theme.DLS.COLOR.BACKGROUND[500]}
+							fill={theme.DLS.COLOR.BACKGROUND[500]}
+						/>
+						<View style={styles.itemCountContainer}>
+							<Typography
+								variant={'heading-sm-bold'}
+								style={styles.itemCount}
+							>
+								{totalItems?.length}
+							</Typography>
+						</View>
+					</View>
+					<View style={styles.placeOrder}>
 						<Typography
 							variant={'heading-sm-bold'}
-							style={styles.itemCount}
+							style={styles.viewCartText}
 						>
-							{'1'}
+							{'Place Order'}
+						</Typography>
+						<Typography
+							variant={'heading-sm-bold'}
+							style={styles.totalAmount}
+						>
+							{`₹${cartTotal}`}
 						</Typography>
 					</View>
-				</View>
-				<View style={styles.placeOrder}>
-					<Typography
-						variant={'heading-sm-bold'}
-						style={styles.viewCartText}
-					>
-						{'Place Order'}
-					</Typography>
-					<Typography
-						variant={'heading-sm-bold'}
-						style={styles.totalAmount}
-					>
-						{'₹500'}
-					</Typography>
-				</View>
-			</TouchableOpacity>
+				</TouchableOpacity>
+			)}
 		</>
 	);
 };
