@@ -178,5 +178,10 @@
 			"foodDescription": "Testing Description",
 			"freeDeliveryText": "Free delivery"
 		}
-	]
+	],
+	"address": {
+		"timeFromHome": "17 mins to home",
+		"tag": "Delivering superfast!",
+		"currentAddress": "Delivery current address"
+	}
 }

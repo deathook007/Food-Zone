@@ -41,28 +41,27 @@ export default function App() {
 		<ThemeProvider theme={currentTheme}>
 			<NavigationContainer>
 				<Stack.Navigator>
-					<Stack.Screen
+					{/* <Stack.Screen
 						name={SCREEN_NAME.ONBOARDING_SCREEN}
 						component={OnboardingScreen}
-					/>
-					{user ? (
-						<>
-							<Stack.Screen
-								name={SCREEN_NAME.HOME_SCREEN}
-								component={HomeScreen}
-							/>
-							<Stack.Screen
-								name={SCREEN_NAME.RESTAURANT_SCREEN}
-								component={RestaurantScreen}
-							/>
-							<Stack.Screen
-								options={{ presentation: 'modal' }}
-								name={SCREEN_NAME.CART_SCREEN}
-								component={CartScreen}
-							/>
-						</>
-					) : (
-						<>
+					/> */}
+					{/* {user ? ( */}
+					<>
+						{/* <Stack.Screen
+							name={SCREEN_NAME.HOME_SCREEN}
+							component={HomeScreen}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.RESTAURANT_SCREEN}
+							component={RestaurantScreen}
+						/> */}
+						<Stack.Screen
+							name={SCREEN_NAME.CART_SCREEN}
+							component={CartScreen}
+						/>
+					</>
+					{/* ) : ( */}
+					{/* <>
 							<Stack.Screen
 								name={SCREEN_NAME.SIGNUP_SCREEN}
 								component={SignupScreen}
@@ -71,8 +70,8 @@ export default function App() {
 								name={SCREEN_NAME.LOGIN_SCREEN}
 								component={LoginScreen}
 							/>
-						</>
-					)}
+						</> */}
+					{/* )} */}
 				</Stack.Navigator>
 			</NavigationContainer>
 		</ThemeProvider>
