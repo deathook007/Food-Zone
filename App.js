@@ -3,9 +3,11 @@ import { LIGHT_MODE } from './constants';
 import { DARK_THEME } from './src/dls/theme/dark.theme';
 import { LIGHT_THEME } from './src/dls/theme/light.theme';
 import CartScreen from './src/screens/Cart/CartScreen';
+import { DeliveryScreen } from './src/screens/DeliveryScreen/DeliveryScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import { LoginScreen } from './src/screens/Login/LoginScreen';
 import { OnboardingScreen } from './src/screens/OnboardingScreen';
+import { OrderProcessing } from './src/screens/OrderProcessing/OrderProcessing';
 import RestaurantScreen from './src/screens/Restaurant/RestaurantScreen';
 import SignupScreen from './src/screens/Signup/SignupScreen';
 import { SCREEN_NAME } from './src/screens/screens.names';
@@ -58,6 +60,14 @@ export default function App() {
 						<Stack.Screen
 							name={SCREEN_NAME.CART_SCREEN}
 							component={CartScreen}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.ORDER_PROCESSING}
+							component={OrderProcessing}
+						/>
+						<Stack.Screen
+							name={SCREEN_NAME.DELIVERY_SCREEN}
+							component={DeliveryScreen}
 						/>
 					</>
 					{/* ) : ( */}

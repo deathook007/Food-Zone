@@ -1,18 +1,15 @@
 import Typography from '../../../dls/Typography/Typography';
 import { generateStyles } from './PaymentSummary.styles';
 import { IPaymentSummaryProps } from './PaymentSummary.types';
-import { useCallback } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 const PaymentSummary = (props: IPaymentSummaryProps) => {
-	const { amountSummary = [] } = props;
+	const { amountSummary = [], handleOnPaceOrder } = props;
 
 	const theme = useTheme();
 
 	const styles = generateStyles(theme);
-
-	const handleOnPaceOrder = useCallback(() => {}, []);
 
 	return (
 		<View style={styles.mainContainer}>

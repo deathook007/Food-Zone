@@ -137,6 +137,7 @@ const RestaurantScreen = () => {
 				</View>
 				{menu.map((item) => {
 					const {
+						id,
 						tag = '',
 						title = '',
 						actualPrice = '',
@@ -148,6 +149,7 @@ const RestaurantScreen = () => {
 					} = item || {};
 					return (
 						<MenuCard
+							key={id}
 							tag={tag}
 							title={title}
 							actualPrice={actualPrice}

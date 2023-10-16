@@ -10,4 +10,5 @@ export interface IPaymentSummaryLineItems {
 
 export interface IPaymentSummaryProps {
 	amountSummary: IPaymentSummaryLineItems[];
+	handleOnPaceOrder: () => void;
 }

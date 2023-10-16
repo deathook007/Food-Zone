@@ -3,6 +3,7 @@ import CartItem from '../../components/common/CartItem/CartItem';
 import PaymentSummary from '../../components/common/PaymentSummary/PaymentSummary';
 import Typography from '../../dls/Typography';
 import data from '../screenData.json';
+import { SCREEN_NAME } from '../screens.names';
 import { hideDefaultHeaded } from '../utility/hideDefaultHeaded';
 import { generateStyles } from './CartScreen.styles';
 import { useNavigation } from '@react-navigation/native';
@@ -31,6 +32,10 @@ const CartScreen = () => {
 
 	const handleBackPress = useCallback(() => {
 		navigation.goBack();
+	}, []);
+
+	const handleOnPaceOrder = useCallback(() => {
+		navigation.navigate(SCREEN_NAME.ORDER_PROCESSING as never);
 	}, []);
 
 	return (
@@ -80,7 +85,10 @@ const CartScreen = () => {
 				</View>
 			</ScrollView>
 			<View style={styles.orderSummary}>
-				<PaymentSummary amountSummary={amountSummary} />
+				<PaymentSummary
+					amountSummary={amountSummary}
+					handleOnPaceOrder={handleOnPaceOrder}
+				/>
 			</View>
 		</>
 	);
