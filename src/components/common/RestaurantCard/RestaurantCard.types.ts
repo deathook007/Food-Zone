@@ -8,5 +8,4 @@ export interface IRestaurantCardProps {
 	foodDescription?: string;
 	freeDeliveryText: string;
 	discount?: string;
-	handleVegRestaurantNavigation: (item: any) => void;
 }
