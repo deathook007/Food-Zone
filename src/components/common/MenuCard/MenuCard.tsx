@@ -138,7 +138,7 @@ const MenuCard = (props: IMenuCardProps) => {
 						fill={theme.DLS.COLOR.PRIMARY[500]}
 					/>
 				</TouchableOpacity>
-				<Typography variant={'heading-md-bold'} style={styles.count}>
+				<Typography variant={'heading-lg-bold'} style={styles.count}>
 					{totalItems?.length}
 				</Typography>
 			</View>

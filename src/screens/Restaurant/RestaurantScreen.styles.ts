@@ -45,7 +45,6 @@ export const generateStyles = (theme: any) => {
 		stickyCart: {
 			position: 'absolute',
 			flexDirection: 'row',
-			justifyContent: 'space-between',
 			bottom: theme.DLS.SIZE[2],
 			width: '95%',
 			alignSelf: 'center',
@@ -56,7 +55,7 @@ export const generateStyles = (theme: any) => {
 			backgroundColor: theme.DLS.COLOR.SUCCESS[500],
 		},
 		cartContainer: {
-			width: '50%',
+			width: '40%',
 			flexDirection: 'row',
 		},
 		itemCountContainer: {
@@ -78,7 +77,7 @@ export const generateStyles = (theme: any) => {
 			},
 		},
 		placeOrder: {
-			width: '50%',
+			width: '60%',
 			flexDirection: 'row',
 			justifyContent: 'space-between',
 			alignSelf: 'center',
