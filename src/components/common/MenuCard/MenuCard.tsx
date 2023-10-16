@@ -15,7 +15,6 @@ const MenuCard = (props: IMenuCardProps) => {
 		title = '',
 		actualPrice = '',
 		discountedPrice = '',
-		price,
 		rating = '',
 		description = '',
 		image = '',
@@ -123,7 +122,7 @@ const MenuCard = (props: IMenuCardProps) => {
 				<View style={styles.menuImageContainer}>
 					<Image
 						source={{
-							uri: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Food.png',
+							uri: image,
 						}}
 						style={styles.image}
 					/>

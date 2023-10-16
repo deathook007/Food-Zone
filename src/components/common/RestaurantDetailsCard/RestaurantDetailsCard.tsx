@@ -12,6 +12,7 @@ const RestaurantDetailsCard = (props: IRestaurantDetailsCardProps) => {
 		deliveryTime = '',
 		foodDescription = '',
 		freeDeliveryText,
+		url = 'https://raw.githubusercontent.com/deathook007/TestImages/main/Food.png',
 	} = props;
 
 	const theme = useTheme();
@@ -21,7 +22,7 @@ const RestaurantDetailsCard = (props: IRestaurantDetailsCardProps) => {
 		<View style={styles.descriptionContainer}>
 			<Image
 				source={{
-					uri: 'https://raw.githubusercontent.com/deathook007/TestImages/main/Food.png',
+					uri: url,
 				}}
 				style={styles.foodImage}
 			/>

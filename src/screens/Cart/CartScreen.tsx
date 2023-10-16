@@ -23,8 +23,6 @@ import { useTheme } from 'styled-components/native';
 const CartScreen = () => {
 	const [groupItems, setGroupItems] = useState({});
 
-	const restaurant = useSelector(selectRestaurant);
-
 	const cartItems = useSelector(selectCartItems);
 
 	const cartTotal = useSelector(selectCartTotal);

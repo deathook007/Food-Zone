@@ -1,7 +1,6 @@
 import {
 	addToCart,
 	removeFromCart,
-	selectCartItemById,
 	selectCartItems,
 	selectCartTotal,
 } from '../../../slices/cartSlice';

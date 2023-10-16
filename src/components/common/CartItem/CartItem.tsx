@@ -1,8 +1,8 @@
 import Typography from '../../../dls/Typography';
 import { generateStyles } from './CartItem.styles';
 import { IMenuCardProps } from './CartItem.types';
-import React, { useCallback } from 'react';
-import { View, TouchableOpacity, Modal, Image } from 'react-native';
+import React from 'react';
+import { View, TouchableOpacity, Image } from 'react-native';
 import * as Icon from 'react-native-feather';
 import { useTheme } from 'styled-components/native';
 

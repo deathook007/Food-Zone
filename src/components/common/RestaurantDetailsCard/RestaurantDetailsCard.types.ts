@@ -3,4 +3,5 @@ export interface IRestaurantDetailsCardProps {
 	deliveryTime: string;
 	foodDescription?: string;
 	freeDeliveryText: string;
+	url?: string;
 }
