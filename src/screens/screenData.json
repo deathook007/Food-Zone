@@ -239,5 +239,8 @@
 		"title": "Processing your Order",
 		"subtitle": "Waiting for Restaurant to accept your order"
 	},
-	"deliveryProcessing": {}
+	"deliveryProcessing": {
+		"title": "Estimated Arrival Time",
+		"subtitle": "16 to 25 Minutes"
+	}
 }

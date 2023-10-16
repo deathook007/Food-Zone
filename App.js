@@ -49,7 +49,7 @@ export default function App() {
 					/> */}
 					{/* {user ? ( */}
 					<>
-						<Stack.Screen
+						{/* <Stack.Screen
 							name={SCREEN_NAME.HOME_SCREEN}
 							component={HomeScreen}
 						/>
@@ -64,7 +64,7 @@ export default function App() {
 						<Stack.Screen
 							name={SCREEN_NAME.ORDER_PROCESSING}
 							component={OrderProcessing}
-						/>
+						/> */}
 						<Stack.Screen
 							name={SCREEN_NAME.DELIVERY_SCREEN}
 							component={DeliveryScreen}
