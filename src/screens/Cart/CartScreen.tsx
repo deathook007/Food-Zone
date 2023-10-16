@@ -69,6 +69,7 @@ const CartScreen = () => {
 					{cartItem.map((item) => {
 						return (
 							<CartItem
+								key={item.id}
 								title={item.title}
 								rating={item.rating}
 								image={item.image}

@@ -47,14 +47,14 @@ export default function App() {
 					/> */}
 					{/* {user ? ( */}
 					<>
-						{/* <Stack.Screen
+						<Stack.Screen
 							name={SCREEN_NAME.HOME_SCREEN}
 							component={HomeScreen}
 						/>
 						<Stack.Screen
 							name={SCREEN_NAME.RESTAURANT_SCREEN}
 							component={RestaurantScreen}
-						/> */}
+						/>
 						<Stack.Screen
 							name={SCREEN_NAME.CART_SCREEN}
 							component={CartScreen}
