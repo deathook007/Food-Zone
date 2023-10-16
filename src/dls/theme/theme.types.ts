@@ -11,6 +11,7 @@ export interface IBrandFontFamily {
 export type ITypographyVariantsStyles = {
 	[key in ITypographyVariants]: {
 		fontSize: number;
+		fontWeight: number;
 		lineHeight: number;
 	};
 };
@@ -44,7 +45,7 @@ export type ITypographyVariants =
 	| 'tag-regular'
 	| 'tag-bold'
 	| 'cta-label-sm'
-	| 'cta-label-lg'
+	| 'cta-label-bold'
 	| 'body-base-regular'
 	| 'body-base-light'
 	| 'body-base-bold'

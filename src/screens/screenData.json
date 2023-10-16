@@ -1,0 +1,243 @@
+{
+	"signUpData": {
+		"SingUpImageUrl": "https://raw.githubusercontent.com/deathook007/TestImages/main/SignupScreen.png",
+		"emailErrorMessage": "Invalid email address",
+		"passwordErrorMessage": "Password must be 8 characters and including numbers and special characters",
+		"passwordMatchError": "Passwords do not match",
+		"emailExistsError": "Email already exists! Please enter another email Id",
+		"buttonText": "Sign up"
+	},
+	"loginData": {
+		"loginImageUrl": "https://raw.githubusercontent.com/deathook007/TestImages/main/SignupScreen.png",
+		"emailErrorMessage": "Invalid email address",
+		"passwordMatchError": "Passwords is incorrect",
+		"invalidCredentialErrorMessage": "Invalid credentials. Please try with rigth credentials",
+		"buttonText": "Login"
+	},
+	"featuredFood": [
+		{
+			"id": 1,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"description": "Testing Restaurant"
+		},
+		{
+			"id": 2,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"description": "Testing Restaurant"
+		},
+		{
+			"id": 3,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"description": "Testing Restaurant"
+		},
+		{
+			"id": 4,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"description": "Testing Restaurant"
+		},
+		{
+			"id": 5,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"description": "Testing Restaurant"
+		},
+		{
+			"id": 6,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"description": "Testing Restaurant"
+		}
+	],
+	"vegRestaurantHeading": "Pure Veg Restaurants",
+	"vegRestaurantSubheading": "Pure Veg Restaurants",
+	"seeAllButtonText": "See All",
+	"vegRestaurants": [
+		{
+			"id": 1,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off"
+		},
+		{
+			"id": 2,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Extra 10% Off"
+		},
+		{
+			"id": 3,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Extra 10% Off",
+			"discount": "50% off"
+		},
+		{
+			"id": 4,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery"
+		},
+		{
+			"id": 5,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery"
+		},
+		{
+			"id": 6,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery"
+		}
+	],
+	"nonVegRestaurantHeading": "Non Veg Restaurants",
+	"nonVegRestaurantSubheading": "Non Veg Restaurants",
+	"nonVegRestaurants": [
+		{
+			"id": 1,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery",
+			"discount": "50% off"
+		},
+		{
+			"id": 2,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Extra 10% Off"
+		},
+		{
+			"id": 3,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Extra 10% Off",
+			"discount": "50% off"
+		},
+		{
+			"id": 4,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery"
+		},
+		{
+			"id": 5,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery"
+		},
+		{
+			"id": 6,
+			"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"title": "Testing Restaurant",
+			"subtitle": "Testing Restaurant",
+			"rating": "4.4 (10k+)",
+			"deliveryTime": "16 mins",
+			"foodDescription": "Testing Description",
+			"freeDeliveryText": "Free delivery"
+		}
+	],
+	"address": {
+		"url": "https://raw.githubusercontent.com/deathook007/TestImages/main/FoodCart.png",
+		"timeFromHome": "17 mins to home",
+		"tag": "Delivering superfast!",
+		"currentAddress": "Delivery current address"
+	},
+	"cartItem": [
+		{
+			"id": 1,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		},
+		{
+			"id": 2,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		},
+		{
+			"id": 3,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		},
+		{
+			"id": 4,
+			"title": "Dish Title",
+			"rating": "4.4 (500)",
+			"image": "https://raw.githubusercontent.com/deathook007/TestImages/main/Screenshot%202023-10-14%20at%2010.33.29%20AM.png",
+			"totalAmount": "₹500"
+		}
+	],
+	"amountSummary": [
+		{
+			"id": "1",
+			"title": "Total Payable",
+			"value": "₹500",
+			"showDashedLine": true
+		},
+		{
+			"id": "2",
+			"title": "Total Payable",
+			"value": "₹500",
+			"showDashedLine": true
+		},
+		{
+			"id": "3",
+			"title": "Total Payable",
+			"value": "₹500",
+			"showDashedLine": false
+		}
+	],
+	"orderProcessing": {
+		"title": "Processing your Order",
+		"subtitle": "Waiting for Restaurant to accept your order"
+	},
+	"deliveryProcessing": {}
+}
