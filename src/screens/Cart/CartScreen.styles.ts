@@ -5,6 +5,12 @@ export const generateStyles = (theme: any) => {
 		cartScreen: {
 			backgroundColor: theme.DLS.COLOR.BACKGROUND[500],
 		},
+		image: {
+			position: 'absolute',
+			width: '100%',
+			height: '100%',
+			opacity: 0.2,
+		},
 		header: {
 			flexDirection: 'row',
 			alignContent: 'center',
@@ -21,6 +27,9 @@ export const generateStyles = (theme: any) => {
 				width: 0,
 				height: 1,
 			},
+		},
+		cartItems: {
+			flexDirection: 'column',
 		},
 	});
 };
